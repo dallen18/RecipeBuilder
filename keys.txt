@@ -1,0 +1,6 @@
+Yelp:
+Client ID
+Z7o0mJcJTMGJYMZsaCKsvA
+
+API Key
+qrnFF_krm4u_WK6q5nlQnLT53aUn3y4MaVfT4SQ69eyU3Y6dS4jU8B6ocT9tXV91bWUy5v7QIWhDdcx-KhXKcAeaebHR08in3Oehh3stAQ9LcIvfe4-vZSiHX5svZXYx

@@ -10,12 +10,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="ip.js" async></script>
+    <script src="search-api.js" async></script>
+    <script src="yelp.js" async></script>
 </head>
 <body>
 <header>
     <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225">
     </a>
     <h2 class="title"></h2>
+
+    <div class="dropdown">
+        <button class="dropbtn">RECIPES<i class="arrow down"></i></button>
+        <div class="dropdown-content">
+            <a href="#">Main Course</a>
+            <a href="#">Side Dish</a>
+            <a href="#">Dessert</a>
+            <a href="#">Appetizer</a>
+            <a href="#">Salad</a>
+            <a href="#">Bread</a>
+            <a href="#">Breakfast</a>
+            <a href="#">Soup</a>
+            <a href="#">Beverage</a>
+            <a href="#">Sauce</a>
+            <a href="#">Drink</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">CUISINE<span><i class="arrow down"></i></span></button>
+        <div class="dropdown-content">
+            <a href="#">African</a>
+            <a href="#">Chinese</a>
+            <a href="#">Japanese</a>
+            <a href="#">Korean</a>
+            <a href="#">Thai</a>
+            <a href="#">Indian</a>
+            <a href="#">British</a>
+            <a href="#">Irish</a>
+            <a href="#">French</a>
+            <a href="#">Mexican</a>
+            <a href="#">American</a>
+            <a href="#">Middle Eastern</a>
+            <a href="#">Cajun</a>
+            <a href="#">Greek</a>
+            <a href="#">Caribbean</a>
+            <a href="#">Latin American</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">ABOUT US</button>
+    </div>
 
     <ul class="mainMenu">
         <span id="follow">follow</span>
@@ -25,14 +80,16 @@
     </ul>
 </header>
 <section class="banner">
-    <div class="search-bar">
-        <form>
-            <i class="fas fa-search"></i>
-            <input type="text">
-            <button type="submit">Search</button>
+    <div class="search-container">
+        <form class="home-search-box-form" id="search-box-form"><br><br>
+            <input type="text" id="search-bar" class="search-content" placeholder="Enter a Recipe"
+                   oninput="checkInput()">
+            <button id="search-btn" onclick="location.href='recipe-results.html'"><i class="fas fa-search"></i>Search
+            </button>
         </form>
     </div>
 </section>
+
 
 <div class="article-section">
     <div id="article-heading">
@@ -148,7 +205,7 @@
     <div class="team-container">
         <div id="team-intro">
             <img id="spatula" src="img/spatula.png" alt="red spatula">
-            <h2>Twelve Tomatoes</h2>
+            <h2>The Twelve Tomatoes Team</h2>
             <p>
                 Simply Recipes is a trusted resource for home cooks with more than 3,000 tested recipes, guides, and
                 meal plans,
@@ -188,10 +245,20 @@
     </div>
 </section>
 
-<footer>
+<footer id="footer">
+    <section class="footer-container">
+        <div id="footer-top">
 
+        </div>
+
+    </section>
+    <section>
+        <div id="footer-bottom">
+            <p>
+                Copyright ©Twelve Tomatoes. All Rights Reserved | Contact Us: +1 22400 00000
+            </p>
+        </div>
+    </section>
 </footer>
-
-
 </body>
 </html>
