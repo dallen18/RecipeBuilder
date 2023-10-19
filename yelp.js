@@ -12,7 +12,7 @@ function yelp() {
         }
     };
 
-    fetch('https://api.yelp.com/v3/businesses/search?latitude=-87.6521&longitude=41.8482&radius=30000&sort_by=best_match&limit=20', options)
+    fetch('http://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?latitude=41.8482&longitude=-87.6521&radius=30000&sort_by=best_match&limit=20', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));

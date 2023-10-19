@@ -1,3 +1,5 @@
+Remember to hide keys before submitting project
+
 Yelp:
 Client ID
 Z7o0mJcJTMGJYMZsaCKsvA

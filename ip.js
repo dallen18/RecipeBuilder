@@ -19,10 +19,15 @@ async function ipFunct() {
         console.log(result);
         ip = JSON.parse(result);
         console.log(ip);
-        console.log('Latitude: ' + ip.location.longitude);
-        console.log('Longitude: ' + ip.location.latitude);
+        let latitude = ip.location.latitude.value;
+        let longitude = ip.location.longitude.value;
+
+        console.log('Longitude: ' + ip.location.longitude);
+        console.log('Latitude: ' + ip.location.latitude);
         console.log('Zip Code: ' + ip.postcode);
         console.log('City: ' + ip.city.name);
+
+        console.log("This is the Latitude: " + latitude);
 
     } catch (error) {
         console.error(error);
