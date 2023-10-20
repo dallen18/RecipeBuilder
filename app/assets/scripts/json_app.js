@@ -20,22 +20,25 @@ function loadApp() {
     }
 
     function loadBusinesses() {
-        $.getJSON("food.json", function (response) {
+        $.getJSON("application.json", function (response) {
             buildOutput(response);
-        })
+        });
     }
 
-// load businesses button
-    $("#loadBusinesses").click(function (event) {
-        event.preventDefault();
-        // load all business data...
+    // Call loadBusinesses when the document is ready
+    $(document).ready(function () {
         loadBusinesses();
     });
 
-// Reset Button
+    // Event handler for the "reset" button
     $("#resetButton").click(function (event) {
         event.preventDefault();
         $('#results').empty();
     });
-};
+}
+
 $(document).ready(loadApp);
+
+
+
+
