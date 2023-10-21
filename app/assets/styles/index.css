@@ -274,8 +274,8 @@ form .fa-search {
 .article-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
     grid-gap: 30px;
     margin-left: 120px;
     margin-right: 120px;
@@ -405,6 +405,12 @@ form .fa-search {
 
 .position {
     color: black;
+}
+
+#yelp-logo {
+    height: 250px;
+    width: 400px;
+    margin-left: 100px;
 }
 
 

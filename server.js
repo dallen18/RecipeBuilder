@@ -1,4 +1,3 @@
-//ip.js code
 "use strict";
 
 // Import required modules
@@ -19,7 +18,10 @@ jsonApp.get("/application.json", function (req, res) {
     handleApplicationRequest(res);
 });
 
-// Define a function to handle the /application.json request
+jsonApp.get("/bars.json", function (req, res) {
+    handleApplicationRequest2(res);
+});
+
 async function handleApplicationRequest(res) {
     try {
         const {latitude, longitude} = await ipFunct();
@@ -33,7 +35,6 @@ async function handleApplicationRequest(res) {
         }).catch(e => {
             console.log(e);
         });
-        //const businesses = await searchYelp(latitude, longitude);
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -49,14 +50,12 @@ async function ipFunct() {
             'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com'
         }
     };
-
     try {
         const response = await fetch(url, options);
         const result = await response.json();
         const ip = result;
         const latitude = ip.location.latitude;
         const longitude = ip.location.longitude;
-
         return {latitude, longitude};
     } catch (error) {
         console.error(error);
@@ -64,19 +63,46 @@ async function ipFunct() {
     }
 }
 
-// Create a function to make the Yelp API request
-/*async function searchYelp(latitude, longitude) {
-    const searchRequest = {
-        latitude: latitude,
-        longitude: longitude,
+/*async function ipFunct2() {
+    const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'a2eb59a3a5msha082d86bf50568bp10e897jsn2845f3101d32',
+            'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com'
+        }
     };
-
     try {
-        const response = await client.search(searchRequest);
-        const businesses = response.jsonBody.businesses;
-        return businesses;
+        const response = await fetch(url, options);
+        const result = await response.json();
+        const ip = result;
+        const city = ip.city.name;
+        return city;
     } catch (error) {
         console.error(error);
         throw error;
     }
 }*/
+
+async function handleApplicationRequest2(res) {
+    try {
+        //const {city} = await ipFunct2(); hardcoded Chicago until further notice
+        const searchRequest2 = {
+            term: 'bars',
+            location: 'Chicago',
+            price: '1',
+        };
+        client.search(searchRequest2).then(response => {
+            res.json(response.jsonBody);
+        }).catch(e => {
+            console.log(e);
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+}
+
+
+
+

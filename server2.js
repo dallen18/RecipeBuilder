@@ -1,4 +1,3 @@
-//ip.js code
 "use strict";
 
 ipFunct();

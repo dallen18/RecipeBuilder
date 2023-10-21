@@ -276,8 +276,8 @@ form .fa-search {
 .article-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
     grid-gap: 30px;
     margin-left: 120px;
     margin-right: 120px;
@@ -304,8 +304,8 @@ form .fa-search {
 }
 
 .article-img {
-    max-width: 366px;
-    max-height: 244px;
+    max-width: 330px;
+    max-height: 230px;
     display: block;
     border-radius: 2px 2px 0 0;
 }

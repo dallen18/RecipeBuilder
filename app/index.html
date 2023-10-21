@@ -7,14 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/landing.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <!--<script src="ip.js" async></script>-->
     <script src="./assets/scripts/search-api.js" async></script>
 </head>
 <body>
@@ -248,6 +247,21 @@
     </div>
 </section>
 
+<!--Yelp API retults-->
+<section class="yelp-result-wrapper">
+    <main>
+        <section id="yelp_output">
+            <div id="results"></div>
+        </section>
+    </main>
+</section>
+
+<section class="yelp-logo-wrapper">
+    <div>
+        <img id="yelp-logo" src="img/yelp_logos/Logo/Light bg/RGB/yelp_logo.svg" alt="Yelp logo">
+    </div>
+</section>
+
 <footer id="footer">
     <section class="footer-container">
         <div id="footer-top">
@@ -262,16 +276,10 @@
             </p>
         </div>
     </section>
-    <!--test Yelp API-->
-    <main>
-        <section id="yelp_output">
-            <p id="results"></p>
-        </section>
-    </main>
-    <!-- API scripts -->
+    <!-- Yelp API scripts -->
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/json_app.js"></script>
-    <!--end of test Yelp API-->
+    <!--end Yelp API-->
 </footer>
 </body>
 </html>
