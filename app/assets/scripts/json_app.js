@@ -2,6 +2,7 @@
 function loadApp() {
     "use strict";
 
+    //loads yelp approved images and matches it to business' ratings
 
     const starImages = {
         0: 'img/yelp_stars/web_and_ios/regular/regular_0@2x.png',
@@ -57,7 +58,7 @@ function loadApp() {
         5: 'img/yelp_stars/web_and_ios/regular/regular_5@2x.png',
     };
 
-// Display Yelp data
+// Function to display Yelp data
     function buildOutput(response) {
         var $yelpResults = response.businesses;
 
@@ -68,6 +69,7 @@ function loadApp() {
         imageContainer.css("overflow-x", "auto");
         imageContainer.css("white-space", "nowrap");
 
+        //Assigns JSON data to variables
         $yelpResults.forEach(function (item) {
             if (item !== null) {
                 var business = item.name;
@@ -81,6 +83,7 @@ function loadApp() {
                 var full_address = address1 + ", " + address2;
                 var url = item.url;
 
+                //Creates a business div
                 var businessDiv = $("<div>");
                 businessDiv.addClass("business-item");
                 businessDiv.css("display", "grid");
@@ -91,21 +94,25 @@ function loadApp() {
                 businessDiv.css("font-size", "22px");
                 businessDiv.text(business);
 
+                //Creates image tag
                 var img = $("<img>");
                 img.attr("src", imageUrl);
                 img.attr("width", "340");
                 img.attr("height", "270");
                 img.css("border", "1px solid black");
 
+                //Creates link to yelp business page
                 var link = $("<a>");
                 link.attr("href", url);
                 link.attr("target", "_blank");
                 link.append(img);
 
+                //Creates div for address
                 var addressDiv = $("<div>");
                 addressDiv.css("font-size", "16px");
                 addressDiv.text(full_address);
 
+                //Creates div for business details
                 var detailsDiv = $("<div>");
                 detailsDiv.css("font-size", "16px");
                 detailsDiv.text(`Phone: ${number}   Price: ${price} `);
@@ -137,6 +144,7 @@ function loadApp() {
                     starRatingDiv.append(reviewsDiv);
                 }
 
+                //Appends everything to image container
                 businessDiv.append(link);
                 businessDiv.append(addressDiv);
                 businessDiv.append(detailsDiv);
@@ -145,15 +153,18 @@ function loadApp() {
             }
         });
 
+        //Appends container to html id results
         $("#results").append(imageContainer);
     }
 
+    //Receives JSON from business in your location
     function loadBusinesses() {
         $.getJSON("application.json", function (response) {
             buildOutput(response);
         });
     }
 
+    //Receives JSON from bars in the local area
     function loadBars() {
         $.getJSON("bars.json", function (response) {
             buildOutput(response);
