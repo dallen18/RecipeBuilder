@@ -397,7 +397,7 @@ form .fa-search {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 20vh; /* Adjust the height as needed */
+    height: 50vh; /* Adjust the height as needed */
 }
 .footer-content p{
     text-align: center;
