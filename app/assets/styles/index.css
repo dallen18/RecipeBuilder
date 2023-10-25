@@ -174,7 +174,7 @@ header ul li a {
     flex-direction: column;
     margin-top: 11vh;
     width: 100%;
-    height: 60vh;
+    height: 52vh;
     animation: rotateBackground 80s linear infinite;
     background-size: cover;
     -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));
@@ -214,6 +214,7 @@ header ul li a {
 }
 
 form {
+    margin-top: 17vh;
     height: 60px;
     width: 600px;
     display: flex;
@@ -413,6 +414,21 @@ form .fa-search {
     margin-left: 100px;
 }
 
+#load-more-btn-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    font-color: #fc1c1c;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#load-more-btn {
+    font-color: #fc1c1c;
+    font-size: 25px;
+
+}
 
 
 
