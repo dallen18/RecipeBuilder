@@ -50,22 +50,21 @@ async function fetchRecipe() {
         let container = document.createElement("div");
         container.className = "recipe-container";
         container.style.display = "grid";
-        container.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
-        container.style.columnGap = "10px";
-        container.style.rowGap = "15px";
-        container.style.margin = "25px";
-        container.style.boxShadow = "6px 5px 5px 6px #fc1c1c";
+        //container.style.border = "1px solid #fc1c1c";
+        container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        //container.style.boxShadow = "6px 5px 5px 6px #fc1c1c";
 
         let placeholder = document.querySelector("#recipe-results");
         let out = "";
         for (let recipe of result.results) {
             out += `
-        <div class="recipe-item" style="justify-content: center">
+        <div class="recipe-item" style="justify-content: center";>
             <div>
-                <img src="${recipe.image}">
+                <img  src="${recipe.image}" class="recipe-image">
             </div> 
             <div>
                 <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
+                <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
                 <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${recipe.readyInMinutes} Mins</p>
             </div>
         </div>
