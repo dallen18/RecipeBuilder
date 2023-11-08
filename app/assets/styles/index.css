@@ -476,12 +476,16 @@ form .fa-search {
 .footer-container {
     margin: auto;
     overflow: hidden;
-    min-height: 25vh;
+    min-height: 20vh;       /* Rushikesh Mode here**/
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 35%, rgba(247, 242, 216, 1) 90%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 20vh;           /* Rushikesh Mode here**/
+
+    
+
+
 }
 
 .footer-content p {
@@ -504,6 +508,8 @@ body {
     padding: 30px 0px;
     font-family: 'Play', sans-serif;
     text-align: center;
+
+
 }
 
 .footer .row {
@@ -728,3 +734,19 @@ body {
       transition: 0.5s;
       color: #333;
     }
+
+
+
+    /**                  FOLLOWING CODE IS TEMPROROY        */
+
+
+
+
+
+
+
+
+
+
+
+
