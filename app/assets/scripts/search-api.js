@@ -10,7 +10,6 @@ function checkInput() {
     }
 }
 
-
 const loadMoreButton = document.getElementById("load-more-btn");
 
 loadMoreButton.addEventListener("click", function (event) {

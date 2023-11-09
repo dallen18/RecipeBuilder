@@ -9,6 +9,7 @@ const jsonApp = express();
 const apiKey = "qrnFF_krm4u_WK6q5nlQnLT53aUn3y4MaVfT4SQ69eyU3Y6dS4jU8B6ocT9tXV91bWUy5v7QIWhDdcx-KhXKcAeaebHR08in3Oehh3stAQ9LcIvfe4-vZSiHX5svZXYx";
 const client = yelp.client(apiKey);
 
+
 jsonApp.use(express.static(__dirname + "/app"));
 
 http.createServer(jsonApp).listen(3030);
@@ -62,6 +63,8 @@ async function ipFunct() {
         throw error;
     }
 }
+
+//Keeping incase of future use
 
 /*async function ipFunct2() {
     const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
