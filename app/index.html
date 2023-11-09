@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="./assets/styles/default.css" rel="stylesheet" title="default styles">
     <link rel="icon" type="image/png" href="img/faviconOne.png" src="img/faviconOne.png"/>
     <title>Twelve Tomatoes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +25,13 @@
 <body>
 <header>
     <div>
-        <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225"></a>
+        <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225">
+        </a>
     </div>
     <div id="dropdown-container">
         <div class="dropdown">
             <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
-                <div class="dropdown-content">
+            <div class="dropdown-content">
                 <a href="#">Main Course</a>
                 <a href="#">Side Dish</a>
                 <a href="#">Dessert</a>
@@ -41,7 +43,7 @@
                 <a href="#">Beverage</a>
                 <a href="#">Sauce</a>
                 <a href="#">Drink</a>
-                </div>
+            </div>
         </div>
         <div class="dropdown">
             <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
@@ -73,7 +75,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">ABOUT US</button>
+            <a href="about-us.html" button class="dropbtn">ABOUT US</button></a>
         </div>
         <div class="dropdown" >
             <button class="dropbtn"><a class="dropbtn" href="login.html">Login</a></button>
@@ -83,12 +85,14 @@
         </div>
     </div>
 
+    <div>
         <!--<ul class="mainMenu">
             <span id="follow">follow</span>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>-->
+    </div>
 </header>
 
 <section class="banner" style="height: 65vh;">
@@ -226,74 +230,43 @@
             <img id="spatula" src="img/spatula.png" alt="red spatula">
             <h1>The Twelve Tomatoes Team</h1>
             <p font-family="helvetica">
-                Simply Recipes is a trusted resource for home cooks with more than 3,000 tested recipes, guides, and
-                meal plans,
-                drawing over 15 million readers each month from around the world. We’re supported by a group of recipe
-                developers,
-                food writers, recipe and product testers, photographers, and other creative professionals.
+                🍅 Welcome to Twelve Tomatoes: Where Every Flavor Tells a Story 🍽️
+
+                Indulge in a culinary adventure at Twelve Tomatoes, your ultimate hub for all things delicious! Whether
+                you're a seasoned chef, a passionate foodie, or someone simply in love with the world of gastronomy, our
+                platform invites you to explore the tantalizing realms of recipes, food articles, and local restaurant
+                experiences.
             </p>
         </div>
-                       
+
         <div class=team-img>
             <div class="img-container">
-                <div class="card">
-                <div class="card-front">
                 <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                </div>
-                <div class="card-back">
-                <h4 class="position" style="color: orangered;">Deontae Allen</h4>
+                <h4>Deontae Allen</h4>
                 <h4 class="position">Front-End/ <br>Back-End Developer</h4>
-                </div>
-                </div>
-                </div>  
-                <div class="img-container">
-                    <div class="card">
-                    <div class="card-front">
-                    <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                    </div>
-                    <div class="card-back">
-                    <h4 class="position" style="color: orangered;">Anosh Kudikala</h4>
-                    <h4 class="position">Front-End Developer</h4>
-                    </div>
-                    </div>
-                </div>  
-                <div class="img-container">
-                        <div class="card">
-                        <div class="card-front">
-                        <img class="team-imgs" src="img/Dhathri.jpg" alt="picture of Deontae">
-                        </div>
-                        <div class="card-back">
-                        <h4 class="position" style="color: orangered;">Dhathri Bathini</h4>
-                        <h4 class="position">Front-End/ <br>Back-End Developer</h4>
-                        </div>
-                        </div>
-                        </div>  
-                        <div class="img-container">
-                            <div class="card">
-                            <div class="card-front">
-                            <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                            </div>
-                            <div class="card-back">
-                            <h4 class="position" style="color: orangered;">Haosen Han</h4>
-                            <h4 class="position">Front-End Developer</h4>
-                            </div>
-                            </div>
-                            </div>  
-                            <div class="img-container">
-                                <div class="card">
-                                <div class="card-front">
-                                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                                </div>
-                                <div class="card-back">
-                                <h4 class="position" style="color: orangered;">Rushikesh Shirsat</h4>
-                                <h4 class="position">Front-End/ <br>Back-End Developer</h4>
-                                </div>
-                                </div>
-                                </div>  
-                    
             </div>
-        </div>    
-            
+            <div class="img-container">
+                <img class="team-imgs" src="../img/ennupic.jpg" alt="picture of Anosh">
+                <h4>Anosh Kudikala</h4>
+                <h4 class="position">Front-End</h4>
+            </div>
+            <div class="img-container">
+                <img class="team-imgs" src="img/Dhathri.jpg" alt="picture of Dhathri">
+                <h4>Dhathri Bathini</h4>
+                <h4 class="position">Front-End/ <br>Back-End Developer</h4>
+            </div>
+            <div class="img-container">
+                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
+                <h4>Haosen Han</h4>
+                <h4 class="position">Position</h4>
+            </div>
+            <div class="img-container">
+                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
+                <h4>Rushikesh Shirsat</h4>
+                <h4 class="position">Position</h4>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!--Yelp API retults-->
@@ -312,38 +285,36 @@
 </section>
 
 <footer>
-   
     <section class="footer-container">
-        <div id="footer-top"></div> 
-    
-    <div class="footer">
-        <div class="row">
-            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
-            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-        </div>
-        <br>
-        <div class="row">
-            <ul>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Career</a></li>
-            </ul>
-        </div>
-        <br>
-        <div class="row">
-            TWELVE TOMATOES © 2021 Twelve Tomatoes - All rights reserved 
-        </div>
-    </div>
-</footer>
+        <div id="footer-top"></div>
 
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            </div>
+            <br>
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <br>
+            <div class="row">
+                TWELVE TOMATOES © 2021 Twelve Tomatoes - All rights reserved
+            </div>
+        </div>
+    </section>
     <!-- Yelp API scripts -->
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/json_app.js"></script>
     <!--end Yelp API-->
-
+</footer>
 </body>
 </html>
