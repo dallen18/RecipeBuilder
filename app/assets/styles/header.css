@@ -5,6 +5,17 @@
     font-family: 'Frank Ruhl Libre', serif;
 }
 
+/*This is to begin after header, adjust as needed for the page*/
+section {
+    position: relative;
+    height: 50vh;
+    margin-top: 11vh;
+}
+
+a {
+    text-decoration: none;
+}
+
 i {
     margin-left: 8px;
 }
@@ -155,133 +166,13 @@ header ul li a {
     text-transform: uppercase;
 }
 
-/*Search bar and background display*/
-.banner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 62vh;
-    animation: rotateBackground 80s linear infinite;
-    background-size: cover;
-    /* -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));*/
-    margin-bottom: 0px;
-}
-
-
-/*Test new search bar*/
-.search-bar-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    background-position: center;
-    background-size: cover;
-    min-height: 40vh;
-
-}
-
-#search-bar-form {
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    width: 40%;
-    max-width: 700px;
-    height: 60px;
-    min-height: 6vh;
-    align-items: center;
-    border-radius: 60px;
-    padding: 10px 20px;
-}
-
-#search-bar-form input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 20px;
-    color: white;
-
-}
-
-#search-bar button i {
-    width: 45px;
-    align-items: center;
-    background: transparent;
-}
-
-#search-bar button {
-    border: 0;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    background: #58629b;
-    background: transparent;
-}
-
 ::placeholder {
     color: white;
 }
 
-
 #follow {
     color: #B5b0b0;
     font-family: sans-serif;
-}
-
-
-.article-section {
-    margin-top: 7vh;
-    margin-bottom: 10px;
-    display: grid;
-    place-items: center center;
-    justify-content: center;
-
-    /* background: rgb(233, 233, 240);
-     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 10%, rgba(247, 242, 216, 1) 45%, rgba(255, 255, 255, 1) 90%);*/
-
-    background: linear-gradient(0deg, rgba(247, 242, 216, 1) 35%, rgba(255, 255, 255, 1) 90%);
-    /*background-color: rgba(163, 139, 134, .15);*/
-}
-
-.article-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    grid-gap: 30px;
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-.article {
-    border-radius: 2px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-    min-height: 400px;
-    max-width: 366px;
-    background-color: white;
-    cursor: pointer;
-}
-
-#article-heading {
-    color: #fc1c1c;
-    font-family: 'Lora';
-    font-size: 22px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: #B5b0b0 underline;
-}
-
-.article-img {
-    max-width: 366px;
-    max-height: 244px;
-    display: block;
-    border-radius: 2px 2px 0 0;
 }
 
 .container {
@@ -364,28 +255,6 @@ header ul li a {
     color: black;
 }
 
-#yelp-logo {
-    height: 250px;
-    width: 400px;
-    margin-left: 100px;
-}
-
-/*Load more button*/
-#load-more-btn-wrapper {
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    display: flex;
-    font-color: #fc1c1c;
-    font-size: 25px;
-    margin-top: 20px;
-}
-
-#load-more-btn {
-    font-color: #fc1c1c;
-    font-size: 25px;
-}
-
 /*footer display*/
 
 #footer {
@@ -414,11 +283,6 @@ header ul li a {
     border-top: solid 2px #B5b0b0;
     background: white;
     min-height: 25vh;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
 }
 
 .footer {
@@ -476,54 +340,15 @@ body {
     }
 }
 
-/*styling for search results, changes grid layout depending on size of the screen*/
-.recipe-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 5px;
-    row-gap: 15px;
-    margin: 2px;
-    margin-top: 4px;
-}
-
-.recipe-image {
-    max-width: 312px;
-    max-height: 231px;
-}
 
 @media (max-width: 1300px) {
-    .recipe-container {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
-    .recipe-item {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 1070px) {
-    .recipe-container {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    p {
-        margin-bottom: 10px;
-    }
-
-    .recipe-item {
-        max-width: 312px;
-        max-height: 388px;
-        justify-content: center;
-    }
 }
 
 @media (max-width: 630px) {
-    .recipe-container {
-        grid-template-columns: 1fr;
-        margin-bottom: 10px;
-    }
 
-    .recipe-item {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
 }

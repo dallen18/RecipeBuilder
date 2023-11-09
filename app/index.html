@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="./assets/styles/default.css" rel="stylesheet" title="default styles">
     <link rel="icon" type="image/png" href="img/faviconOne.png" src="img/faviconOne.png"/>
     <title>Twelve Tomatoes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +16,7 @@
     <script src="./assets/scripts/search-api.js" async></script>
     <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="./assets/styles/style.css" rel="stylesheet" type="text/css">
+<!--<link href="./assets/styles/style.css" rel="stylesheet" type="text/css">-->
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
@@ -78,30 +77,29 @@
             <a href="about-us.html" button class="dropbtn">ABOUT US</button></a>
         </div>
         <div class="dropdown" >
-            <button class="dropbtn"><a class="dropbtn" href="login.html">Login</a></button>
+            <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a></button>
         </div>
         <div class="dropdown">
-            <button class="dropbtn"><a class="dropbtn" href="signup.html">SignUp</a></button>
+            <button class="dropbtn"><a class="dropbtn" href="signup.html">SIGN UP</a></button>
         </div>
     </div>
 
     <div>
-        <!--<ul class="mainMenu">
+        <ul class="mainMenu">
             <span id="follow">follow</span>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        </ul>-->
+        </ul>
     </div>
 </header>
 
-<section class="banner" style="height: 65vh;">
+<section class="banner">
     <div class="search-bar-container">
-        <form class="home-search-box-form" id="search-box-form"><br><br>
-            <input type="text" id="search-bar" class="search-content" placeholder="Enter a Recipe"
+        <form id="search-bar-form">
+            <input type="text" id="search-bar" class="search-content" placeholder="Search a Recipe"
                    oninput="checkInput()">
-            <button id="search-btn" style= "width: 40%";><i class="fas fa-search"></i>Search
-            </button>
+            <button id="search-btn"><i class="fas fa-search"></i></button>
         </form>
     </div>
 </section>
@@ -112,117 +110,6 @@
 <div id="load-more-btn-wrapper">
     <button id="load-more-btn">More Results</button>
 </div>
-
-
-<!--<div class="article-section">
-    <div id="article-heading">
-        <h2>Articles</h2>
-    </div>
-    <section class="article-cards">
-        <div class="article card1">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of hamburger">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>The brownie recipe that changed the world</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card2">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card3">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card4">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card5">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card6">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card7">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card8">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card9">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-    </section>
-</div> -->
 
 <section class="team-members">
     <div class="team-container">
@@ -246,7 +133,7 @@
                 <h4 class="position">Front-End/ <br>Back-End Developer</h4>
             </div>
             <div class="img-container">
-                <img class="team-imgs" src="../img/ennupic.jpg" alt="picture of Anosh">
+                <img class="team-imgs" src="img/ennupic.jpg" alt="picture of Anosh">
                 <h4>Anosh Kudikala</h4>
                 <h4 class="position">Front-End</h4>
             </div>
@@ -280,14 +167,13 @@
 
 <section class="yelp-logo-wrapper">
     <div>
-        <img id="yelp-logo" src="img/yelp_logos/Logo/Light bg/RGB/yelp_logo.svg" alt="Yelp logo">
+        <a href="https://www.yelp.com/"><img id="yelp-logo" src="img/yelp_logos/Logo/Light bg/RGB/yelp_logo.svg" alt="Yelp logo"></a>
     </div>
 </section>
 
 <footer>
     <section class="footer-container">
         <div id="footer-top"></div>
-
         <div class="footer">
             <div class="row">
                 <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
