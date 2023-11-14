@@ -15,8 +15,6 @@ const recipeKey = process.env.RecipeKey;
 let page = 1; // Track the current page
 const resultsPerPage = 36; // Number of results per page
 
-console.log(recipeKey);
-
 jsonApp.use(express.static(__dirname + "/app"));
 
 http.createServer(jsonApp).listen(3030);
