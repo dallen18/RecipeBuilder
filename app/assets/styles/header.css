@@ -267,7 +267,7 @@ header ul li a {
     margin: auto;
     overflow: hidden;
     min-height: 25vh;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 35%, rgba(247, 242, 216, 1) 90%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 35%, rgba(252, 28, 28, 1) 90%);
     display: flex;
     justify-content: center;
     align-items: center;
