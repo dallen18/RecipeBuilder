@@ -489,14 +489,17 @@ form .fa-search {
     align-items: center;
     text-decoration: none;
     display: flex;
-    font-color: #fc1c1c;
+    font-color: white;
     font-size: 25px;
     margin-top: 20px;
 }
 
 #load-more-btn {
-    font-color: #fc1c1c;
+    color: white;
     font-size: 25px;
+    background-color: #fc1c1c;
+    opacity: 75%;
+    border-radius: 15px;
 }
 
 /*footer display*/
@@ -516,6 +519,7 @@ form .fa-search {
     justify-content: center;
     align-items: center;
     height: 50vh;
+    border-top: solid 2px #B5b0b0;
 }
 
 .footer-content p {

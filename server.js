@@ -165,6 +165,26 @@ async function handleApplicationRequest2(res) {
     }
 }*/
 
+jsonApp.get("/api/searchRecipe", function (req, res) {
+    const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?maxReadyTime=20&number=10`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': recipeKey,
+            'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+        }
+    };
+
+    fetch(url, options)
+        .then(response => response.json())
+        .then(result => {
+            res.json(result);
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).json({error: "Internal Server Error"});
+        });
+});
 
 
 
