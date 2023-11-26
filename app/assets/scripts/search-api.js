@@ -10,6 +10,14 @@ function checkInput() {
     }
 }
 
+//Converts minutes to hours if minutes exceed 60
+//Taken from https://plainenglish.io/blog/javascript-convert-minutes-to-hours-and-minutes
+function toHoursAndMinutes(totalMinutes) {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    return {hours, minutes};
+}
+
 /*Loads more recipes with the fetchRecipe function, find a way to check whether or not there's already been a search and call startRecipe
 * if no previous search has been done*/
 const loadMoreButton = document.getElementById("load-more-btn");
@@ -48,9 +56,12 @@ async function fetchRecipe() {
         container.style.display = "grid";
         container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
 
+
         let placeholder = document.querySelector("#recipe-results");
         let out = "";
         for (let recipe of result.results) {
+            const {hours, minutes} = toHoursAndMinutes(recipe.readyInMinutes);
+            const timeDisplay = `${hours > 0 ? hours + 'h ' : ''}${minutes}m`;
             out += `
                 <div class="recipe-item" style="justify-content: center";>
                     <div>
@@ -59,7 +70,7 @@ async function fetchRecipe() {
                     <div>
                         <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${recipe.readyInMinutes} Mins</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${timeDisplay}</p>
                         <button class="recipe-details-btn">View Details</button>
                     </div>
                 </div>
@@ -164,7 +175,6 @@ async function startRecipe() {
     try {
         const response = await fetch("/api/searchRecipe");
         const result = await response.json();
-        console.log(result);
 
         let container = document.createElement("div");
         container.className = "recipe-container";
@@ -174,6 +184,8 @@ async function startRecipe() {
         let placeholder = document.querySelector("#recipe-results");
         let out = "";
         for (let recipe of result.recipes) {
+            const {hours, minutes} = toHoursAndMinutes(recipe.readyInMinutes);
+            const timeDisplay = `${hours > 0 ? hours + 'h ' : ''}${minutes}m`;
             out += `
                 <div class="recipe-item" style="justify-content: center";>
                     <div>
@@ -182,7 +194,7 @@ async function startRecipe() {
                     <div>
                         <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${recipe.readyInMinutes} Mins</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${timeDisplay}</p>
                         <!--find a way to center button and other items on page-->
                         <button class="recipe-details-btn">View Details</button>
                     </div>
@@ -196,8 +208,6 @@ async function startRecipe() {
         document.querySelectorAll(".recipe-item").forEach((item, index) => {
             item.addEventListener("click", () => openModal(result.recipes[index]));
         });
-
-        page++; // Increment the page for the next fetch
 
     } catch (error) {
         console.error(error);
