@@ -74,9 +74,9 @@ and open the template in the editor.
                     <div class="dropdown">
                         <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
                         <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="recipe1.html">Link 1</a>
+                            <a href="recipe2.html">Link 2</a>
+                            <a href="recipe3.html">Link 3</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -101,7 +101,7 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="about-us.html" button class="dropbtn">ABOUT US</button></a>
+                        <button  class="dropbtn"><a class="dropbtn" href="about-us.html">ABOUT US</a></button>
                     </div>
                     <div class="dropdown" >
                         <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a></button>
@@ -115,10 +115,16 @@ and open the template in the editor.
                     </ul>
             </header>
         </div>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul> 
         <body>
         <section class="banner">
             <div class="login-container">
                 <h2 style="color: black;">Sign Up</h2>
+                <i><span id="signup-error" style='color: red;'></span></i>
                   <div class="input-group">
                     <label for="username">Email address</label>
                     <input type="text" class="input1" id="email" name="username" Placeholder="Email Address" required>
@@ -130,6 +136,7 @@ and open the template in the editor.
                   <button type="submit" onclick="signup()">Create an account</button>
               </div>
               <script>
+                const signupError = document.getElementById("signup-error");
                 function signup() {
                   var email = document.getElementById('email').value;
                   var password = document.getElementById('password').value;
@@ -137,11 +144,13 @@ and open the template in the editor.
                     .then((userCredential) => {
                       // Signed up
                       var user = userCredential.user;
+                      window.location.href = "index.html";
                       console.log('User created:', user);
                     })
                     .catch((error) => {
                       var errorCode = error.code;
                       var errorMessage = error.message;
+                      signupError.textContent = errorMessage.substring(9, errorMessage.indexOf('.'));
                       console.log(errorCode, errorMessage);
                     });
                 }
