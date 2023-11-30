@@ -64,6 +64,7 @@ async function fetchRecipe() {
             const timeDisplay = `${hours > 0 ? hours + 'h ' : ''}${minutes}m`;
             out += `
                 <div class="recipe-item" style="justify-content: center";>
+                <div class="ring">Loading<span></span></div>
                     <div>
                         <img  src="${recipe.image}" class="recipe-image">
                     </div> 
@@ -91,13 +92,17 @@ async function fetchRecipe() {
 }
 
 /*Open modal function*/
+
+/*
 function openModal(recipe) {
     const modal = document.getElementById("myModal");
     const modalTitle = document.getElementById("modalTitle");
     const modalIngredients = document.getElementById("modalIngredients");
     const modalInstructions = document.getElementById("modalInstructions");
     const modalSummary = document.getElementById("modalSummary");
-    modalTitle.textContent = recipe.title;
+
+    // Create and set modal title with image
+    modalTitle.innerHTML = `<img src="img/spatula.png" style="width: 85px; height: 25px; margin-right: 25px; " alt="Recipe Image" class="modal-image">${recipe.title}`;
 
     // Extract and process the steps from the provided HTML
     const stepsHtml = recipe.instructions;
@@ -128,6 +133,56 @@ function openModal(recipe) {
     modalSummary.textContent = removeTags(recipe.summary);
     modal.style.display = "block";
 }
+*/
+
+
+function openModal(recipe) {
+    const modal = document.getElementById("myModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalIngredients = document.getElementById("modalIngredients");
+    const modalInstructions = document.getElementById("modalInstructions");
+    const modalSummary = document.getElementById("modalSummary");
+
+    // Create and set modal title with image
+    modalTitle.innerHTML = `<img src="img/spatula.png" style="width: 85px; height: 25px; margin-right: 25px; " alt="Recipe Image" class="modal-image">${recipe.title}`;
+
+    // Extract and process the steps from the provided HTML
+    const stepsHtml = recipe.instructions;
+    const stepsContainer = document.createElement('div');
+    stepsContainer.innerHTML = stepsHtml;
+
+    // Extract and process the steps from the provided HTML
+    const stepsArray = recipe.analyzedInstructions[0].steps;
+
+    // Extract text content from list items and create a numbered list
+    const stepsListItems = stepsContainer.querySelectorAll('li');
+    const numberedSteps = Array.from(stepsListItems).map((step, index) => `${index + 1}. ${step.textContent.trim()}`);
+
+    // If there are no <li> elements, add numbers to the beginning of each line
+    const plainTextSteps = stepsContainer.textContent.trim().split('\n').map((step, index) => `${index + 1}. ${step.trim()}`);
+
+    // Label the steps section
+    const stepsLabel = "Steps:";
+    const stepsContent = numberedSteps.length > 0 ? numberedSteps.join('<br>') : plainTextSteps.join('<br>');
+
+    // Set modal instructions with the labeled and formatted content
+    modalInstructions.innerHTML = `<strong style="font-size: 22px;">${stepsLabel}</strong><br>${stepsContent}`;
+
+    // Extract and display ingredients
+    const ingredientsArray = stepsArray.reduce((acc, step) => acc.concat(step.ingredients || []), []);
+
+    // Create a list of ingredients
+    const ingredientList = ingredientsArray.map((ingredient) => `${ingredient.name}`).join(', ');
+
+    // Set modal ingredients
+    modalIngredients.innerHTML = `<strong style="font-size: 22px;">Ingredients: </strong>${ingredientList}`;
+
+    // Set modal summary
+    modalSummary.innerHTML = `<strong style="font-size: 22px;">Summary: </strong>${removeTags(recipe.summary)}`;
+
+
+    modal.style.display = "block";
+}
 
 
 function openModals(recipe) {
@@ -138,7 +193,7 @@ function openModals(recipe) {
     const modalSummary = document.getElementById("modalSummary");
 
     // Populate modal title with recipe information
-    modalTitle.textContent = recipe.title;
+    modalTitle.innerHTML = `<img src="img/spatula.png" style="width: 85px; height: 25px; margin-right: 25px; " alt="Recipe Image" class="modal-image">${recipe.title}`;
 
     // Extract and process the steps from the provided HTML
     const stepsArray = recipe.analyzedInstructions[0].steps;
