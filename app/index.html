@@ -22,11 +22,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="overlay"></div>
 <header>
-    <div>
+    <div class="logo">
         <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225">
         </a>
     </div>
+    <nav>
+        <div id="menu-icon">&#9776;</div>
     <div id="dropdown-container">
         <div class="dropdown">
             <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
@@ -83,8 +86,8 @@
             <button class="dropbtn"><a class="dropbtn" href="signup.html">SIGN UP</a></button>
         </div>
     </div>
-
-    <div>
+    </nav>
+    <div class="mainMenu">
         <ul class="mainMenu">
             <span id="follow">follow</span>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -212,6 +215,40 @@
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/json_app.js"></script>
     <!--end Yelp API-->
+
+    <!--Hamburger Menu Script, Toggles dropdown visibility, menu icon state, and overlay on menu icon click-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuIcon = document.getElementById('menu-icon');
+            var dropdownContainer = document.getElementById('dropdown-container');
+            var overlay = document.getElementById('overlay');
+
+            menuIcon.addEventListener('click', function () {
+                if (dropdownContainer.style.display === 'block') {
+                    dropdownContainer.style.display = 'none';
+                    menuIcon.innerHTML = '&#9776;'; // Set the icon back to the hamburger
+                    overlay.style.display = 'none';
+                    document.body.classList.remove('overlay-open');
+                } else {
+                    dropdownContainer.style.display = 'block';
+                    menuIcon.innerHTML = '&#10005;'; // Set the icon to an "X"
+                    overlay.style.display = 'block'; // Show the overlay
+                    document.body.classList.add('overlay-open');
+                }
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1090) {
+                        dropdownContainer.style.display = 'flex';
+                        menuIcon.innerHTML = '&#9776;';
+                        overlay.style.display = 'none'; // Unlocks screen if it is enlarged
+
+                    } else {
+                        dropdownContainer.style.display = 'none'; //Needs this or it will display flex even after close button is clicked and screen is enlarged and reduced again
+                    }
+                });
+            });
+        });
+    </script>
 </footer>
 </body>
 </html>

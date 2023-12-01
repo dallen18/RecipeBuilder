@@ -136,7 +136,7 @@ header {
     justify-content: center;
     align-items: center;
     transition: 0.6s;
-    padding: 10px 30px;
+    padding: 0px 30px;
     z-index: 100000;
     background-color: white;
     height: 11vh;
@@ -163,7 +163,7 @@ header .logo {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
-    padding-top: 8px;
+    padding-top: 4px;
 }
 
 .arrow {
@@ -542,8 +542,8 @@ form .fa-search {
 }
 
 #yelp-logo {
-    height: 250px;
-    width: 400px;
+    height: 200px;
+    width: 370px;
     margin-left: 100px;
 }
 
@@ -686,7 +686,7 @@ body {
     }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1000px) {
     .recipe-container {
         grid-template-columns: 1fr 1fr;
     }
@@ -758,4 +758,94 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/*Hamburger styling before and after screen less than 1090px*/
+.logo {
+    order: 0; /* Logo is initially the first item */
+}
+
+#menu-icon {
+    display: none; /* Initially hide the menu icon */
+    cursor: pointer;
+    font-size: 44px;
+    margin-right: 50px;
+}
+
+/* Media query for screens less than 1090px */
+@media (max-width: 1090px) {
+    header {
+        align-items: center;
+    }
+
+    header .logo {
+        order: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu-icon {
+        display: block;
+        order: 2;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        width: 23px;
+        height: 30px;
+        margin-right: 50px;
+        margin-left: 20px;
+        color: #fc1c1c;
+    }
+
+    .mainMenu {
+        order: 3;
+    }
+
+    #dropdown-container {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        max-width: 25vh;
+        text-align: center;
+        margin-top: 10px;
+        flex: 1;
+        justify-content: flex-end;
+    }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent background */
+    z-index: 2;
+/
+}
+
+/* Add this rule to disable scrolling when the overlay is displayed */
+body.overlay-open {
+    overflow: hidden;
+}
+
+@media (min-width: 1091px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+
 

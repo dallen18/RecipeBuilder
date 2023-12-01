@@ -171,13 +171,11 @@ function loadApp() {
         });
     }
 
-
     // Call loadBusinesses and loadBars when the document is ready
     $(document).ready(function () {
         loadBusinesses();
         loadBars();
     });
-
 }
 
 $(document).ready(loadApp);
