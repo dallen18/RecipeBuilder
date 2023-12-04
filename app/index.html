@@ -40,6 +40,31 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyCATUhWa7w5gYlUVUHwIEUSxUZil6z7WgE",
+        authDomain: "foodrecipe-77827.firebaseapp.com",
+        projectId: "foodrecipe-77827",
+        storageBucket: "foodrecipe-77827.appspot.com",
+        messagingSenderId: "194158679612",
+        appId: "1:194158679612:web:c1e9d25588bfb7ae739539",
+        //measurementId: "G-EL7WSPTK41"
+      };
+      const app = firebase.initializeApp(firebaseConfig);
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          document.getElementById('login').style.display = 'none';
+          document.getElementById('logout').style.display = 'block';
+          console.log("Userrrrrrrrrrrrrrr!!!!");
+          console.log(user.email);
+        }
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -78,9 +103,9 @@
             QUICK & EASY<span><i class="arrow down"></i></span>
           </button>
           <div class="dropdown-content">
-            <a href="recipe1.html">Link 1</a>
-            <a href="recipe2.html">Link 2</a>
-            <a href="recipe3.html">Link 3</a>
+            <a href="recipe1.html">Garlic Chilli Oil Noodles</a>
+            <a href="recipe2.html">ButterMilk Pumpkin Pancakes</a>
+            <a href="recipe3.html">Basic Biscuits</a>
           </div>
         </div>
         <div class="dropdown">
@@ -111,32 +136,25 @@
             <a class="dropbtn" href="about-us.html">ABOUT US</a>
           </button>
         </div>
-        <div class="dropdown">
+        <div class="dropdown" id="login">
           <button class="dropbtn">
-            <a class="dropbtn" href="login.html">LOGIN</a>
+            <a class="dropbtn" href="login.html">LOGIN</a>/<a
+              class="dropbtn"
+              href="signup.html"
+              >SIGN UP</a
+            >
           </button>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            <a class="dropbtn" href="signup.html">SIGN UP</a>
+        <div class="dropdown" id="logout" style="display:none;">
+          <button class="dropbtn" id="user-email">Hi User!
+            <span><i class="arrow down"></i></span>
           </button>
-        </div>
+          <div class="dropdown-content">
+            <a href="#" class="dropbtn">PROFILE</a>
+            <a href="#" class="dropbtn">SAVED RECIPES</a>
+            <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
       </div>
-
-      <div>
-        <ul class="mainMenu">
-          <span id="follow">follow</span>
-          <li>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-        </ul>
-      </div>
+      
     </header>
 
     <section class="banner">
@@ -257,6 +275,19 @@
             alt="Yelp logo"
         /></a>
       </div>
+      <script>
+            function logout(){
+              //if(user) -----> need to work on this and also on the disappearing thing.
+              firebase.auth().signOut().then(() => {
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('login').style.display = 'block';
+                alert("You are Logging Out!");
+              console.log("Bye!!!!!")
+        });
+
+            }
+                       </script>
+      </script>
     </section>
 
     <footer>
