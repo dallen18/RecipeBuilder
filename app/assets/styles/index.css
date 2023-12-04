@@ -9,6 +9,13 @@ a {
     text-decoration: none;
 }
 
+button {
+    border-radius: 3px;
+    background-color: rgb(181, 176, 176, .3);
+    padding: 2px;
+    border: none;
+}
+
 i {
     margin-left: 8px;
 }
@@ -507,6 +514,7 @@ form .fa-search {
     align-items: center;
     text-align: center;
     font-family: Helvetica;
+    background-color: rgb(181, 176, 176, .3);
 }
 
 .team-imgs {
@@ -559,11 +567,7 @@ form .fa-search {
 }
 
 #load-more-btn {
-    color: white;
     font-size: 25px;
-    background-color: #fc1c1c;
-    opacity: 75%;
-    border-radius: 15px;
 }
 
 /*footer display*/

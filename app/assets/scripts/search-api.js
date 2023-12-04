@@ -64,7 +64,6 @@ async function fetchRecipe() {
             const timeDisplay = `${hours > 0 ? hours + 'h ' : ''}${minutes}m`;
             out += `
                 <div class="recipe-item" style="justify-content: center";>
-                <div class="ring">Loading<span></span></div>
                     <div>
                         <img  src="${recipe.image}" class="recipe-image">
                     </div> 
