@@ -1,417 +1,298 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="./assets/styles/default.css" rel="stylesheet" title="default styles">
-    <link rel="icon" type="image/png" href="img/faviconOne.png" src="img/faviconOne.png"/>
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/faviconOne.png"
+      src="img/faviconOne.png"
+    />
     <title>Twelve Tomatoes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="./assets/scripts/search-api.js" async></script>
     <!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
-</head>
-<body>
-<header>
-    <div>
-        <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--<link href="./assets/styles/style.css" rel="stylesheet" type="text/css">-->
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="#" class="logo"
+          ><img
+            rel="log"
+            type="image/png"
+            src="img/faviconSix.png"
+            height="80"
+            width="225"
+          />
         </a>
-    </div>
-    <div id="dropdown-container">
+      </div>
+      <div id="dropdown-container">
         <div class="dropdown">
-            <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="#">Main Course</a>
-                <a href="#">Side Dish</a>
-                <a href="#">Dessert</a>
-                <a href="#">Appetizer</a>
-                <a href="#">Salad</a>
-                <a href="#">Bread</a>
-                <a href="#">Breakfast</a>
-                <a href="#">Soup</a>
-                <a href="#">Beverage</a>
-                <a href="#">Sauce</a>
-                <a href="#">Drink</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">CUISINE<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="#">African</a>
-                <a href="#">Chinese</a>
-                <a href="#">Japanese</a>
-                <a href="#">Korean</a>
-                <a href="#">Thai</a>
-                <a href="#">Indian</a>
-                <a href="#">British</a>
-                <a href="#">Irish</a>
-                <a href="#">French</a>
-                <a href="#">Mexican</a>
-                <a href="#">American</a>
-                <a href="#">Middle Eastern</a>
-                <a href="#">Cajun</a>
-                <a href="#">Greek</a>
-                <a href="#">Caribbean</a>
-                <a href="#">Latin American</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">ABOUT US</button>
-        </div>
-    </div>
-
-    <div>
-        <ul class="mainMenu">
-            <span id="follow">follow</span>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        </ul>
-    </div>
-</header>
-<section class="banner">
-    <div class="search-container">
-        <form class="home-search-box-form" id="search-box-form"><br><br>
-            <input type="text" id="search-bar" class="search-content" placeholder="Enter a Recipe"
-                   oninput="checkInput()">
-            <button id="search-btn"><i class="fas fa-search"></i>Search
-            </button>
-        </form>
-    </div>
-</section>
-
-
-<div class="article-section">
-    <div id="article-heading">
-        <h2>Articles</h2>
-    </div>
-    <section class="article-cards">
-        <div class="article card1">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of hamburger">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>The brownie recipe that changed the world</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card2">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card3">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-
-        <div class="article card4">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card5">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card6">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card7">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card8">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-        <div class="article card9">
-            <article class="article">
-                <div class="container">
-                    <img class=article-img src="img/hamburger.jpeg" alt="picture of brownie">
-                </div>
-                <div class="details">
-                    <h4>recipe</h4>
-                    <h2>Brownie Recipe</h2>
-                </div>
-            </article>
-        </div>
-    </section>
-</div>
-
-<section class="team-members">
-    <div class="team-container">
-        <div id="team-intro">
-            <img id="spatula" src="img/spatula.png" alt="red spatula">
-            <h1>The Twelve Tomatoes Team</h1>
-            <p font-family="helvetica">
-                Simply Recipes is a trusted resource for home cooks with more than 3,000 tested recipes, guides, and
-                meal plans,
-                drawing over 15 million readers each month from around the world. We’re supported by a group of recipe
-                developers,
-                food writers, recipe and product testers, photographers, and other creative professionals.
-            </p>
-        </div>
-        <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <img src="img/ennu pic 300*400.jpg" alt="" />
-              </div>
-              <div class="back">
-                <div class="details">
-                  <div class="caption">
-                    " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                    quisquam iure in! Corporis expedita consequatur tenetur rem
-                    ratione saepe, perferendis ipsam alias quam. Libero illum maxime,
-                    unde itaque ratione "
-                  </div>
-                  <h2>Madison Goldbeck</h2>
-                  <span>Senior Developer</span>
-      
-                  <div class="social-icon">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <div class="card">
-              <div class="front">
-                <img src="img/" alt="" />
-              </div>
-              <div class="back">
-                <div class="details">
-                  <div class="caption">
-                    " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                    quisquam iure in! Corporis expedita consequatur tenetur rem
-                    ratione saepe, perferendis ipsam alias quam. Libero illum maxime,
-                    unde itaque ratione "
-                  </div>
-                  <h2>Capella Fiona</h2>
-                  <span>Senior Designer</span>
-      
-                  <div class="social-icon">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-    
-            <div class="card">
-                <div class="front">
-                  <img src="" alt="" />
-                </div>
-                <div class="back">
-                  <div class="details">
-                    <div class="caption">
-                      " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                      quisquam iure in! Corporis expedita consequatur tenetur rem
-                      ratione saepe, perferendis ipsam alias quam. Libero illum maxime,
-                      unde itaque ratione "
-                    </div>
-                    <h2>Capella Fiona</h2>
-                    <span>Senior Designer</span>
-        
-                    <div class="social-icon">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-    
-    
-              
-    
-            <div class="card">
-              <div class="front">
-                <img src="https://www.tavistockwood.com/wp-content/uploads/2019/03/Frecheville-James-Headshot-300x400.jpg"
-                  alt="" />
-              </div>
-              <div class="back">
-                <div class="details">
-                  <div class="caption">
-                    " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                    quisquam iure in! Corporis expedita consequatur tenetur rem
-                    ratione saepe, perferendis ipsam alias quam. Libero illum maxime,
-                    unde itaque ratione "
-                  </div>
-                  <h2>James Bond</h2>
-                  <span>CEO</span>
-      
-                  <div class="social-icon">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <button class="dropbtn">
+            RECIPES<span><i class="arrow down"></i></span>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Main Course</a>
+            <a href="#">Side Dish</a>
+            <a href="#">Dessert</a>
+            <a href="#">Appetizer</a>
+            <a href="#">Salad</a>
+            <a href="#">Bread</a>
+            <a href="#">Breakfast</a>
+            <a href="#">Soup</a>
+            <a href="#">Beverage</a>
+            <a href="#">Sauce</a>
+            <a href="#">Drink</a>
           </div>
-      
-          <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
-        <div class=team-img>
-            <div class="img-container">
-                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                <h4>Deontae Allen</h4>
-                <h4 class="position">Front-End/ <br>Back-End Developer</h4>
-            </div>
-            <div class="img-container">
-                <img class="team-imgs" src="img/ennu pic .jpg" alt="picture of Anosh">
-                <h4>Anosh Kudikala</h4>
-                <h4 class="position">Front-End</h4>
-            </div>
-            <div class="img-container">
-                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                <h4>Dhathri Bathini</h4>
-                <h4 class="position">Position</h4>
-            </div>
-            <div class="img-container">
-                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                <h4>Haosen Han</h4>
-                <h4 class="position">Position</h4>
-            </div>
-            <div class="img-container">
-                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
-                <h4>Rushikesh Shirsat</h4>
-                <h4 class="position">Position</h4>
-            </div>
         </div>
-    </div>
-</section>
+        <div class="dropdown">
+          <button class="dropbtn">
+            QUICK & EASY<span><i class="arrow down"></i></span>
+          </button>
+          <div class="dropdown-content">
+            <a href="recipe1.html">Link 1</a>
+            <a href="recipe2.html">Link 2</a>
+            <a href="recipe3.html">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            CUISINE<span><i class="arrow down"></i></span>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">African</a>
+            <a href="#">Chinese</a>
+            <a href="#">Japanese</a>
+            <a href="#">Korean</a>
+            <a href="#">Thai</a>
+            <a href="#">Indian</a>
+            <a href="#">British</a>
+            <a href="#">Irish</a>
+            <a href="#">French</a>
+            <a href="#">Mexican</a>
+            <a href="#">American</a>
+            <a href="#">Middle Eastern</a>
+            <a href="#">Cajun</a>
+            <a href="#">Greek</a>
+            <a href="#">Caribbean</a>
+            <a href="#">Latin American</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <a class="dropbtn" href="about-us.html">ABOUT US</a>
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <a class="dropbtn" href="login.html">LOGIN</a>
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <a class="dropbtn" href="signup.html">SIGN UP</a>
+          </button>
+        </div>
+      </div>
 
-<!--Yelp API retults-->
-<section class="yelp-result-wrapper">
-    <main>
+      <div>
+        <ul class="mainMenu">
+          <span id="follow">follow</span>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="search-bar-container">
+        <form id="search-bar-form">
+          <input
+            type="text"
+            id="search-bar"
+            class="search-content"
+            placeholder="Search a Recipe"
+            oninput="checkInput()"
+          />
+          <button id="search-btn">
+            <img src="img/search-icon.png" id="search-icon" />
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="search-results">
+      <div id="recipe-results" class="recipe-container"></div>
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalIngredients"></p>
+          <p id="modalInstructions"></p>
+          <p id="modalSummary"></p>
+        </div>
+      </div>
+      <!--end of modal-->
+    </section>
+    <div id="load-more-btn-wrapper">
+      <button id="load-more-btn">More Results</button>
+    </div>
+
+    <section class="team-members">
+      <div class="team-container">
+        <div id="team-intro">
+          <img id="spatula" src="img/spatula.png" alt="red spatula" />
+          <h1>The Twelve Tomatoes Team</h1>
+          <p font-family="helvetica">
+            🍅 Welcome to Twelve Tomatoes: Where Every Flavor Tells a Story 🍽️
+            Indulge in a culinary adventure at Twelve Tomatoes, your ultimate
+            hub for all things delicious! Whether you're a seasoned chef, a
+            passionate foodie, or someone simply in love with the world of
+            gastronomy, our platform invites you to explore the tantalizing
+            realms of recipes, food articles, and local restaurant experiences.
+          </p>
+        </div>
+
+        <div class="team-img">
+          <div class="img-container">
+            <img
+              class="team-imgs"
+              src="img/deontaeImage.jpg"
+              alt="picture of Deontae"
+            />
+            <h4>Deontae Allen</h4>
+            <h4 class="position">Front-End/ <br />Back-End Developer</h4>
+          </div>
+          <div class="img-container">
+            <img
+              class="team-imgs"
+              src="img/ennupic.jpg"
+              alt="picture of Anosh"
+            />
+            <h4>Anosh Kudikala</h4>
+            <h4 class="position">Front-End</h4>
+          </div>
+          <div class="img-container">
+            <img
+              class="team-imgs"
+              src="img/Dhathri.jpg"
+              alt="picture of Dhathri"
+            />
+            <h4>Dhathri Bathini</h4>
+            <h4 class="position">Front-End/ <br />Back-End Developer</h4>
+          </div>
+          <div class="img-container">
+            <img
+              class="team-imgs"
+              src="img/deontaeImage.jpg"
+              alt="picture of Deontae"
+            />
+            <h4>Haosen Han</h4>
+            <h4 class="position">Position</h4>
+          </div>
+          <div class="img-container">
+            <img
+              class="team-imgs"
+              src="img/deontaeImage.jpg"
+              alt="picture of Deontae"
+            />
+            <h4>Rushikesh Shirsat</h4>
+            <h4 class="position">Position</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Yelp API retults-->
+    <section class="yelp-result-wrapper">
+      <main>
         <section id="yelp_output">
-            <div id="results"></div>
+          <div id="results"></div>
         </section>
-    </main>
-</section>
+      </main>
+    </section>
 
-<section class="yelp-logo-wrapper">
-    <div>
-        <img id="yelp-logo" src="img/yelp_logos/Logo/Light bg/RGB/yelp_logo.svg" alt="Yelp logo">
-    </div>
-</section>
+    <section class="yelp-logo-wrapper">
+      <div>
+        <a href="https://www.yelp.com/"
+          ><img
+            id="yelp-logo"
+            src="img/yelp_logos/Logo/Light bg/RGB/yelp_logo.svg"
+            alt="Yelp logo"
+        /></a>
+      </div>
+    </section>
 
-<footer>
-   
-    <section class="footer-container">
-        <div id="footer-top"></div> 
-    
-    <div class="footer">
-        <div class="row">
-            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+    <footer>
+      <section class="footer-container">
+        <div id="footer-top"></div>
+        <div class="footer">
+          <div class="row">
+            <a href="https://www.facebook.com/"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fa fa-instagram"></i
+            ></a>
             <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
             <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-        </div>
-        <br>
-        <div class="row">
+          </div>
+          <br />
+          <div class="row">
             <ul>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Career</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Career</a></li>
             </ul>
+          </div>
+          <br />
+          <div class="row">
+            TWELVE TOMATOES © 2021 Twelve Tomatoes - All rights reserved
+          </div>
         </div>
-        <br>
-        <div class="row">
-            TWELVE TOMATOES © 2021 Twelve Tomatoes - All rights reserved 
-        </div>
-    </div>
-</footer>
-
-    <!-- Yelp API scripts -->
-    <script src="./assets/scripts/jquery.js"></script>
-    <script src="./assets/scripts/json_app.js"></script>
-    <!--end Yelp API-->
-
-    <!--- anosh About us-->
-    
-
-</body>
+      </section>
+      <!-- Yelp API scripts -->
+      <script src="./assets/scripts/jquery.js"></script>
+      <script src="./assets/scripts/json_app.js"></script>
+      <!--end Yelp API-->
+    </footer>
+  </body>
 </html>

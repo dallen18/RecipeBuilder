@@ -1,0 +1,113 @@
+#banner_image{
+    padding-top:75px;
+    padding-bottom:50px;
+    text-align:center;
+    color:#f8f8f8;
+    background:url(bootstrap/img/intro-bg_1.jpg) no-repeat center center;
+    background-size:cover;
+}
+#banner_content{
+    position:relative;
+    padding-top:6%;
+    padding-bottom:6%;
+    margin-top:12%;
+    margin-bottom:12%;
+    background-color:rgba(0,0,0,0.7);
+    max-width:660px;
+}
+#footer{
+    padding:10px 0;
+    background-color:#101010;
+    color:#9d9d9d;
+    bottom:0;
+    width:100%;
+}
+.first{
+    padding-top:100px;
+}
+.last{
+    padding-top: 1000px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #fc1c1c;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #4cae4c;
+  }
+  
+  .card {
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #fff;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: white;
+}

@@ -1,9 +1,12 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Frank Ruhl Libre', serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 i {
@@ -32,6 +35,7 @@ button.dropbtn {
     font-family: "Roboto Thin";
     font-size: 16px;
     background-color: white;
+    text-decoration: none;
 }
 
 body {
@@ -168,44 +172,128 @@ header ul li a {
     text-transform: uppercase;
 }
 
+/*Search bar and background display*/
 .banner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-top: 11vh;
     width: 100%;
-    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 62vh;
     animation: rotateBackground 80s linear infinite;
     background-size: cover;
-    -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));
+    /* -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));*/
     margin-bottom: 0px;
 }
 
 
 @keyframes rotateBackground {
     0% {
-        background-image: url(img/backgroundImageFour.webp);
+        background-image: linear-gradient(rgba(0, 8, 51, 0.5), rgba(0, 8, 51, 0.5)), url(img/backgroundImageFour.webp);
     }
     25% {
-        background-image: url('img/backgroundImageFour.webp');
+        background-image: linear-gradient(rgba(0, 8, 51, 0.5), rgba(0, 8, 51, 0.5)), url('img/backgroundImageFour.webp');
     }
     35% {
-        background-image: url('img/backgroundImageOne.jpeg');
+        background-image: linear-gradient(rgba(0, 8, 51, 0.5), rgba(0, 8, 51, 0.5)), url('img/backgroundImageFour.webp');
     }
     75% {
-        background-image: url('img/backgroundImageOne.jpeg');
+        background-image: linear-gradient(rgba(0, 8, 51, 0.5), rgba(0, 8, 51, 0.5)), url('img/backgroundImageFour.webp');
     }
     100% {
-        background-image: url('img/backgroundImageFour.webp');
+        background-image: linear-gradient(rgba(0, 8, 51, 0.5), rgba(0, 8, 51, 0.5)), url('img/backgroundImageFour.webp');
     }
 }
 
 
-.search-button-btn {
-    color: #fc1c1c;
+/*Test new search bar*/
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-position: center;
+    background-size: cover;
+    min-height: 40vh;
+
 }
 
-.search-container {
+#search-bar-form {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    width: 40%;
+    max-width: 700px;
+    height: 60px;
+    min-height: 6vh;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+#search-bar-form input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: white;
+
+}
+
+#search-bar button i {
+    width: 45px;
+    align-items: center;
+    background: transparent;
+}
+
+#search-btn:hover i {
+    background: #fc1c1c;
+}
+
+#search-btn:hover {
+    background: #fc1c1c;
+    opacity: 75%
+}
+
+#search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: #58629b;
+    background: transparent;
+}
+
+#search-btn {
+    background: transparent;
+    color: white;
+    border-radius: 40px 40px 40px 40px;
+    height: 60px;
+    width: 100px;
+    margin-left: 40px
+}
+
+#search-bar.search-content {
+    background: transparent;
+}
+
+#search-icon {
+    z-index: 100000;
+    height: 25px;
+    width: 25px;
+}
+
+::placeholder {
+    color: white;
+}
+
+/*end of test*/
+
+/*
+.search-bar-container {
     display: flex;
     width: 100%;
     height: 40vh;
@@ -214,6 +302,7 @@ header ul li a {
 }
 
 form {
+    margin-top: 17vh;
     height: 60px;
     width: 600px;
     display: flex;
@@ -243,19 +332,20 @@ form .fa-search {
     align-self: center;
     padding: 10px 20px;
 }
-
+*/
 #follow {
     color: #B5b0b0;
     font-family: sans-serif;
 }
 
-#search-bar {
+/*#search-bar {
     font-family: sans-serif;
     font-size: large;
     padding-left: 14px;
     align-items: center;
     justify-content: center;
-}
+}*/
+
 
 .article-section {
     margin-top: 7vh;
@@ -312,6 +402,7 @@ form .fa-search {
     position: relative;
 }
 
+/* Team member section and Yelp logo*/
 .team-members {
     background-color: white;
     display: grid;
@@ -359,7 +450,6 @@ form .fa-search {
     max-height: 160px;
     flex-wrap: wrap;
     border-radius: 50%;
-    /*clip-path: circle(50% at 50% 50%);*/
     border: 2px solid #fc1c1c;
     border-color: #fc1c1c;
     justify-content: center;
@@ -383,33 +473,6 @@ form .fa-search {
     color: #fc1c1c;
 }
 
-#footer {
-    background-color: white;
-    color: black;
-    font-size: 14px;
-}
-
-.footer-container {
-    margin: auto;
-    overflow: hidden;
-    min-height: 25vh;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 35%, rgba(247, 242, 216, 1) 90%);
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 50vh; /* Adjust the height as needed */
-}
-.footer-content p{
-    text-align: center;
-    
-}
-
-#footer-bottom {
-    border-top: solid 2px #B5b0b0;
-    background: white;
-    min-height: 25vh;
-}
-
 .position {
     color: black;
 }
@@ -420,183 +483,211 @@ form .fa-search {
     margin-left: 100px;
 }
 
+/*Load more button*/
+#load-more-btn-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    font-color: #fc1c1c;
+    font-size: 25px;
+    margin-top: 20px;
+}
 
-body{
-    margin:0;
-    overflow-x:hidden;
-    }
-    
-    .footer{
-    background: whitel;
-    padding:30px 0px;
+#load-more-btn {
+    font-color: #fc1c1c;
+    font-size: 25px;
+}
+
+/*footer display*/
+
+#footer {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-container {
+    margin: auto;
+    overflow: hidden;
+    min-height: 25vh;
+    /*background: linear-gradient(0deg, rgba(252, 28, 28, 1) 10%, rgba(255, 255, 255, 1) 90%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.footer-content p {
+    text-align: center;
+
+}
+
+#footer-bottom {
+    border-top: solid 2px #B5b0b0;
+    background: white;
+    min-height: 25vh;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.footer {
+    padding: 30px 0px;
     font-family: 'Play', sans-serif;
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:gray;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:#fff;
-    }
-    
-    .footer .row ul{
-    width:100%;
-    }
-    
-    .footer .row ul li{
-    display:inline-block;
-    margin:0px 30px;
-    }
-    
-    .footer .row a i{
-    font-size:2em;
-    margin:0% 1%;
-    }
-    
-    @media (max-width:720px){
-    .footer{
-    text-align:left;
-    padding:5%;
-    }
-    .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
-    }
-    .footer .row a i{
-    margin:0% 3%;
-    }
+    text-align: center;
+    margin-top: 200px;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
     }
 
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
 
-    @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap");
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
 
-    body {
-      font-family: "Josefin Sans", sans-serif;
-      background: #1e1e1e;
-      color: whitesmoke;
+/*styling for search results, changes grid layout depending on size of the screen*/
+.recipe-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 15px;
+    margin: 2px;
+    margin-top: 4px;
+}
+
+.recipe-image {
+    max-width: 312px;
+    max-height: 231px;
+}
+
+.recipe-item {
+    max-width: 312px;
+}
+
+@media (max-width: 1300px) {
+    .recipe-container {
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    
-    body h1 {
-      text-align: center;
+
+    .recipe-item {
+        justify-content: center;
     }
-    
-    .card-container {
-      position: relative;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      width: 100%;
-      align-self: center;
+}
+
+@media (max-width: 1070px) {
+    .recipe-container {
+        grid-template-columns: 1fr 1fr;
     }
-    
-    .card {
-        margin: 20px 40px 40px 20px;
-        width: 200px; /* Decreased width */
-        height: 300px; /* Decreased height */
-        transform-style: preserve-3d;
-        perspective: 600px;
-        transition: 0.5s;
-      }
-    
-    .card .front {
-      border: solid 10px whitesmoke;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      transition: 0.5s;
-      -webkit-box-shadow: 0px 10px 13px -7px #000000,
-        5px 5px 15px 5px rgba(0, 0, 0, 0);
-      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    p {
+        margin-bottom: 10px;
     }
-    
-    .card:hover .front {
-      transform: rotateY(-180deg);
+
+    .recipe-item {
+        max-width: 312px;
+        max-height: 388px;
+        justify-content: center;
     }
-    
-    .card .back {
-      border: solid 10px whitesmoke;
-      width: 100%;
-      height: 100%;
-      background: #1d1d1d;
-      backface-visibility: hidden;
-      transform: rotateY(180deg);
-      transition: 0.5s;
-      -webkit-box-shadow: 0px 10px 13px -7px #000000,
-        5px 5px 15px 5px rgba(0, 0, 0, 0);
-      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    
-    
+}
+
+@media (max-width: 630px) {
+    .recipe-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 10px;
     }
-    
-    .card:hover .back {
-      transform: rotateY(0deg);
+
+    .recipe-item {
+        justify-content: center;
+        margin-bottom: 10px;
     }
-    
-    .card .back .details {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    
-    .card .back .details .caption {
-      font-weight: 100;
-      font-style: italic;
-    }
-    
-    .card .back .details .caption,
-    h2,
-    span {
-      color: whitesmoke;
-    }
-    
-    .social-icon {
-      padding: 10px;
-    }
-    
-    .social-icon a {
-      display: inline-block;
-      width: 36px;
-      background: #333;
-      text-align: center;
-      text-decoration: none;
-      color: whitesmoke;
-      border-radius: 50%;
-      transition: 0.5s;
-    }
-    
-    .social-icon a .fab {
-      line-height: 36px;
-    }
-    
-    .social-icon a:hover {
-      background: rgb(104, 240, 215);
-    }
-    
-    .social-icon a:hover i {
-      transition: 0.5s;
-      color: #333;
-    }
+}
+
+/* Styling of the modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    align-items: center;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#modalTitle {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
