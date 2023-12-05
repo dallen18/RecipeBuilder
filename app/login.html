@@ -74,9 +74,9 @@
                     <div class="dropdown">
                         <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
                         <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="recipe1.html">Garlic Chilli Oil Noodles</a>
+                            <a href="recipe2.html">ButterMilk Pumpkin Pancakes</a>
+                            <a href="recipe3.html">Basic Biscuits</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -101,26 +101,27 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="about-us.html" button class="dropbtn">ABOUT US</button></a>
+                        <button  class="dropbtn"><a class="dropbtn" href="about-us.html">ABOUT US</a></button>
                     </div>
                     <div class="dropdown">
                         <button class="dropbtn"><a class="dropbtn" href="signup.html">SIGN UP</a></button>
                     </div>
                 </div>
            </header>
-        </div>      
+        </div>     
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul> 
                     
-                    <ul class="mainMenu">
-                        <span id="follow">follow</span>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
+                    
                 
                  <section class="banner">
             
                 <div class="login-container">
                   <h2 style="color: black;">Login</h2>
+                  <i><span id="login-error" style='color: red;'></span></i>
                     <div class="input-group">
                       <label for="username">Email Address</label>
                       <input type="text"  id="login-email" name="username" required>
@@ -135,6 +136,7 @@
                     </div>
                 </div>
                 <script>
+                    const loginError = document.getElementById("login-error");
                     function login() {
                        var email = document.getElementById('login-email').value;
                        var password = document.getElementById('login-password').value;
@@ -142,14 +144,20 @@
                          .then((userCredential) => {
                            // Signed in
                            var user = userCredential.user;
+                           window.location.href = "index.html";
                            console.log('User logged in:', user);
                          })
                          .catch((error) => {
                            var errorCode = error.code;
                            var errorMessage = error.message;
+                           if(errorCode ==  "auth/invalid-login-credentials")
+                           loginError.textContent ="Please enter correct E-mail id and Password";
+                           else
+                           loginError.textContent = errorMessage.substring(9, errorMessage.indexOf('.'));;
                            console.log(errorCode, errorMessage);
                          });
                      }
+                     
                    </script>
                 
         </section>
