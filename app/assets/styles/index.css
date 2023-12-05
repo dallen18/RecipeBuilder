@@ -7,6 +7,7 @@
 
 a {
     text-decoration: none;
+    color: #fc1c1c;
 }
 
 button {
@@ -14,6 +15,12 @@ button {
     background-color: rgb(181, 176, 176, .3);
     padding: 2px;
     border: none;
+}
+
+button:hover {
+    background: #fc1c1c;
+    color: white;
+    opacity: 75%
 }
 
 i {
@@ -338,7 +345,7 @@ header ul li a {
     background: transparent;
 }
 
-#search-btn {
+tn {
     background: transparent;
     color: white;
     border-radius: 40px 40px 40px 40px;
@@ -532,7 +539,7 @@ form .fa-search {
 .img-container {
     padding: 10px;
     font-family: Helvetica;
-    color: #fc1c1c;;
+    color: #fc1c1c;
 }
 
 .details {
@@ -580,14 +587,7 @@ form .fa-search {
 
 .footer-container {
     margin: auto;
-    overflow: hidden;
-    min-height: 25vh;
-    /*background: linear-gradient(0deg, rgba(252, 28, 28, 1) 10%, rgba(255, 255, 255, 1) 90%);*/
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    border-top: solid 2px #B5b0b0;
 }
 
 .footer-content p {
@@ -601,6 +601,58 @@ form .fa-search {
     min-height: 25vh;
 }
 
+/*test footer*/
+.footer-container {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Two rows, first auto height, second takes the remaining space */
+    margin-bottom: 50px;
+    min-height: 25vh;
+    /*background: linear-gradient(0deg, rgba(252, 28, 28, 1) 10%, rgba(255, 255, 255, 1) 90%);*/
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border-top: solid 2px #B5b0b0;
+}
+
+#footer-top {
+    display: flex;
+    justify-content: space-between; /* Space elements apart */
+    align-items: center; /* Center items vertically */
+    width: 100%;
+}
+
+#footer-signup,
+.footer-options {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 30px;
+    color: #fc1c1c;
+}
+
+.footer-options ul {
+    padding: 5px;
+}
+
+.footer-options ul a:hover {
+    text-decoration: underline;
+}
+
+#footer-signup img, h3, h4, form {
+    color: black;
+    padding: 7px;
+}
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+/*end test*/
+
 body {
     margin: 0;
     overflow-x: hidden;
@@ -610,7 +662,7 @@ body {
     padding: 30px 0px;
     font-family: 'Play', sans-serif;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 20px;
 }
 
 .footer .row {
@@ -678,7 +730,13 @@ body {
 
 .recipe-item {
     max-width: 312px;
+    padding-bottom: 5px;
 }
+
+.recipe-details-btn {
+    margin-left: 120px;
+}
+
 
 @media (max-width: 1300px) {
     .recipe-container {

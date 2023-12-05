@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-     <script src="./assets/scripts/search-api.js" async></script>
-     <!--FONT AWESOME-->
+    <script src="./assets/scripts/search-api.js" async></script>
+    <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link href="./assets/styles/style.css" rel="stylesheet" type="text/css">-->
     <!--GOOGLE FONTS-->
@@ -187,7 +187,26 @@
 
 <footer>
     <section class="footer-container">
-        <div id="footer-top"></div>
+        <div id="footer-top">
+            <div id="footer-signup">
+                <ul><a href="#" class="logo"><img src="img/faviconSix.png" alt="Logo" height="80" width="225"></a></ul>
+                <ul><h3>Are you prepared to start cooking?</h3></ul>
+                <ul><h4>Sign up for our site</h4></ul>
+                <!-- Signup Form -->
+                <form action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="footer-options">
+                <ul><a href="#">Recipes</a></ul>
+                <ul><a href="#">Quick & Easy</a></ul>
+                <ul><a href="#">Cuisine</a></ul>
+                <ul><a href="about-us.html">About Us</a></ul>
+                <ul><a href="login.html">Log In</a></ul>
+            </div>
+        </div>
         <div class="footer">
             <div class="row">
                 <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
@@ -211,6 +230,7 @@
             </div>
         </div>
     </section>
+
     <!-- Yelp API scripts -->
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/json_app.js"></script>

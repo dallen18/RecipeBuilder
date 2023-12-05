@@ -55,6 +55,7 @@ async function fetchRecipe() {
         container.className = "recipe-container";
         container.style.display = "grid";
         container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        container.style.placeItems = "center";
 
 
         let placeholder = document.querySelector("#recipe-results");
@@ -200,6 +201,7 @@ async function startRecipe() {
         container.className = "recipe-container";
         container.style.display = "grid";
         container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        container.style.placeItems = "center";
 
         let placeholder = document.querySelector("#recipe-results");
         let out = "";
