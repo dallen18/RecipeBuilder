@@ -276,7 +276,7 @@ header ul li a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 62vh;
+    height: 55vh;
     /*animation: rotateBackground 80s linear infinite;*/
     background-size: cover;
     /* -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));*/
@@ -370,59 +370,10 @@ tn {
 
 /*end of test*/
 
-/*
-.search-bar-container {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    align-items: center;
-    justify-content: center;
-}
-
-form {
-    margin-top: 17vh;
-    height: 60px;
-    width: 600px;
-    display: flex;
-    background-color: white;
-    border: solid #B5b0b0;
-}
-
-form input {
-    flex: 1;
-    background-color: white;
-    border: none;
-    outline: none;
-}
-
-form button {
-    background: #B5b0b0;
-    padding: 10px 50px;
-    border: none;
-    outline: none;
-    color: white;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-size: 17px;
-}
-
-form .fa-search {
-    align-self: center;
-    padding: 10px 20px;
-}
-*/
 #follow {
     color: #B5b0b0;
     font-family: sans-serif;
 }
-
-/*#search-bar {
-    font-family: sans-serif;
-    font-size: large;
-    padding-left: 14px;
-    align-items: center;
-    justify-content: center;
-}*/
 
 
 .article-section {
@@ -431,12 +382,7 @@ form .fa-search {
     display: grid;
     place-items: center center;
     justify-content: center;
-
-    /* background: rgb(233, 233, 240);
-     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 10%, rgba(247, 242, 216, 1) 45%, rgba(255, 255, 255, 1) 90%);*/
-
     background: linear-gradient(0deg, rgba(247, 242, 216, 1) 35%, rgba(255, 255, 255, 1) 90%);
-    /*background-color: rgba(163, 139, 134, .15);*/
 }
 
 .article-cards {
@@ -486,6 +432,10 @@ form .fa-search {
     display: grid;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: rgb(181, 176, 176, .3);
+    border-top: solid 2px #B5b0b0;
+    border-bottom: solid 2px #B5b0b0;
+    padding: 30px;
 }
 
 .team-container {
@@ -521,7 +471,6 @@ form .fa-search {
     align-items: center;
     text-align: center;
     font-family: Helvetica;
-    background-color: rgb(181, 176, 176, .3);
 }
 
 .team-imgs {

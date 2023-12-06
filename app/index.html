@@ -106,14 +106,24 @@
             </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
-            <a class="dropbtn" href="about-us.html">ABOUT US</a>
-          </button>
+            <button class="dropbtn">
+                <a class="dropbtn" href="about-us.html">ABOUT US</a>
+            </button>
         </div>
         <div class="dropdown" id="login">
-          <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
-              href="signup.html">SIGN UP</a>
-          </button>
+            <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                      href="signup.html">SIGN UP</a>
+            </button>
+        </div>
+        <div class="dropdown" id="logout" style="display:none;">
+            <button class="dropbtn" id="user-email">Hi User!
+                <span><i class="arrow down"></i></span>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" class="dropbtn">PROFILE</a>
+                <a href="#" class="dropbtn">SAVED RECIPES</a>
+                <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+            </div>
         </div>
     </div>
     </nav>
@@ -125,16 +135,6 @@
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
         </ul>
     </div>
-        <div class="dropdown" id="logout" style="display:none;">
-          <button class="dropbtn" id="user-email">Hi User!
-            <span><i class="arrow down"></i></span>
-          </button>
-          <div class="dropdown-content">
-            <a href="#" class="dropbtn">PROFILE</a>
-            <a href="#" class="dropbtn">SAVED RECIPES</a>
-            <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
-      </div>
-        </div>
 </header>
 
 <section class="banner">
@@ -178,6 +178,9 @@
                 platform invites you to explore the tantalizing realms of recipes, food articles, and local restaurant
                 experiences.
             </p>
+            <a href="about-us.html">
+                <button id="about-us-btn">Read More</button>
+            </a>
         </div>
 
         <div class=team-img>
@@ -197,7 +200,7 @@
                 <h4 class="position">Front-End/ <br>Back-End Developer</h4>
             </div>
             <div class="img-container">
-                <img class="team-imgs" src="img/missingImage.jpeg" alt="Missing photo image">
+                <img class="team-imgs" src="img/Haosen.jpg" alt="Missing photo image">
                 <h4>Haosen Han</h4>
                 <h4 class="position">Position</h4>
             </div>

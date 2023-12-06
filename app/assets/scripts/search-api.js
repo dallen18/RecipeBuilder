@@ -71,7 +71,7 @@ async function fetchRecipe() {
                     <div>
                         <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${timeDisplay}</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;"> ${timeDisplay}</p>
                         <button class="recipe-details-btn">View Details</button>
                     </div>
                 </div>
@@ -216,7 +216,7 @@ async function startRecipe() {
                     <div>
                         <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px; margin: 5px;"> ${timeDisplay}</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;"> ${timeDisplay}</p>
                         <!--find a way to center button and other items on page-->
                         <button class="recipe-details-btn">View Details</button>
                     </div>
