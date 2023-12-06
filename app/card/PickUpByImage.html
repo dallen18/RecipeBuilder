@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipes</title>
+    <style>
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="../index.html" >
+        <img
+                src="../img/FaviconSix.png"
+                height="40"
+                width="110"
+        />
+    </a>
+</div>
+
+<h1>Food Recipes Pick Up By Image </h1>
+<input type="text" id="searchTerm" placeholder="Enter a food item (e.g., beef)">
+<button id="loadData">Load Recipes</button>
+<div id="data"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<script>
+        document.getElementById('loadData').addEventListener('click', function() {
+            var searchTerm = document.getElementById('searchTerm').value;
+            const container = document.getElementById('data');
+            container.innerHTML = '';
+
+            fetch(`https://food-recipes-with-images.p.rapidapi.com/?q=${encodeURIComponent(searchTerm)}`, {
+                method: 'GET',
+                headers: {
+                    'X-Rapidapi-Key': 'f45a75ea1cmsh0dd1751d526138fp1f1ac1jsn1b2f727d5f7a',
+                    'X-Rapidapi-Host': 'food-recipes-with-images.p.rapidapi.com',
+                    'Cache-Control': 'no-cache'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                data.d.forEach(recipe => {
+                    if (recipe.Image) {
+                        const link = document.createElement('a');
+                        link.href = '#';
+                        link.onclick = function() { showModal(recipe); };
+
+                        const img = document.createElement('img');
+                        img.src = recipe.Image.startsWith('//') ? 'https:' + recipe.Image : recipe.Image;
+                        img.className = 'recipe-image';
+
+                        link.appendChild(img);
+                        container.appendChild(link);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                container.textContent = `Error loading data: ${error.message}`;
+            });
+        });
+
+        function showModal(recipe) {
+            var modal = document.getElementById('myModal');
+            var span = document.getElementsByClassName('close')[0];
+            var text = document.getElementById('modalText');
+
+            text.innerHTML = `
+                <h2>${recipe.Title}</h2>
+                <p><strong>Ingredients:</strong></p>
+                <ul>${Object.values(recipe.Ingredients).map(ingredient => `<li>${ingredient}</li>`).join('')}</ul>
+                <p><strong>Instructions:</strong></p>
+                <p>${recipe.Instructions}</p>
+            `;
+
+            modal.style.display = 'block';
+
+            span.onclick = function() {
+                modal.style.display = 'none';
+            };
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        }
+    </script>
+</body>
+</html>

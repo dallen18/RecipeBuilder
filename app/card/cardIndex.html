@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="../img/faviconOne.png" src="../img/faviconOne.png"/>
+  <title>Twelve Tomatoes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/styles/index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="../assets/scripts/search-api.js" async></script>
+  <!--FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link href="./assets/styles/style.css" rel="stylesheet" type="text/css">-->
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"/>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyCATUhWa7w5gYlUVUHwIEUSxUZil6z7WgE",
+        authDomain: "foodrecipe-77827.firebaseapp.com",
+        projectId: "foodrecipe-77827",
+        storageBucket: "foodrecipe-77827.appspot.com",
+        messagingSenderId: "194158679612",
+        appId: "1:194158679612:web:c1e9d25588bfb7ae739539",
+        //measurementId: "G-EL7WSPTK41"
+          };
+      const app = firebase.initializeApp(firebaseConfig);
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          document.getElementById('login').style.display = 'none';
+          document.getElementById('logout').style.display = 'block';
+          console.log("Userrrrrrrrrrrrrrr!!!!");
+          console.log(user.email);
+        }
+      });
+    </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div id="overlay"></div>
+<header>
+  <div class="logo">
+    <a href="#" class="logo"><img rel="log" type="image/png" src="../img/FaviconSix.png" height="80" width="225">
+    </a>
+  </div>
+  <nav>
+    <div id="menu-icon">&#9776;</div>
+    <div id="dropdown-container">
+      <div class="dropdown">
+        <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
+        <div class="dropdown-content">
+          <a href="#">Main Course</a>
+          <a href="#">Side Dish</a>
+          <a href="#">Dessert</a>
+          <a href="#">Appetizer</a>
+          <a href="#">Salad</a>
+          <a href="#">Bread</a>
+          <a href="#">Breakfast</a>
+          <a href="#">Soup</a>
+          <a href="#">Beverage</a>
+          <a href="#">Sauce</a>
+          <a href="#">Drink</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
+        <div class="dropdown-content">
+          <a href="../recipe1.html">Chilli Oil Noodles</a>
+          <a href="../recipe2.html">Pumpkin Pancakes</a>
+          <a href="../recipe3.html">Basic Biscuits</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">CUISINE<span><i class="arrow down"></i></span></button>
+        <div class="dropdown-content">
+          <a href="#">African</a>
+          <a href="#">Chinese</a>
+          <a href="#">Japanese</a>
+          <a href="#">Korean</a>
+          <a href="#">Thai</a>
+          <a href="#">Indian</a>
+          <a href="#">British</a>
+          <a href="#">Irish</a>
+          <a href="#">French</a>
+          <a href="#">Mexican</a>
+          <a href="#">American</a>
+          <a href="#">Middle Eastern</a>
+          <a href="#">Cajun</a>
+          <a href="#">Greek</a>
+          <a href="#">Caribbean</a>
+          <a href="#">Latin American</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a class="dropbtn" href="../about-us.html">ABOUT US</a>
+        </button>
+      </div>
+      <div class="dropdown" id="login">
+        <button class="dropbtn"><a class="dropbtn" href="../login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                  href="../signup.html">SIGN UP</a>
+        </button>
+      </div>
+      <div class="dropdown" id="logout" style="display:none;">
+        <button class="dropbtn" id="user-email">Hi User!
+          <span><i class="arrow down"></i></span>
+        </button>
+        <div class="dropdown-content">
+          <a href="#" class="dropbtn">PROFILE</a>
+          <a href="#" class="dropbtn">SAVED RECIPES</a>
+          <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="mainMenu">
+    <ul class="mainMenu">
+      <span id="follow">follow</span>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="banner">
+  <div class="search-bar-container">
+    <form id="search-bar-form">
+      <input type="text" id="search-bar" class="search-content" placeholder="Search a Recipe"
+             oninput="checkInput()">
+      <button id="search-btn"><img src="../img/search-icon.png" id="search-icon"></button>
+    </form>
+  </div>
+</section>
+
+<section class="search-results">
+  <div id="recipe-results" class="recipe-container"></div>
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalIngredients"></p>
+      <p id="modalInstructions"></p>
+      <p id="modalSummary"></p>
+    </div>
+  </div>
+  <!--end of modal-->
+</section>
+<div id="load-more-btn-wrapper">
+  <button id="load-more-btn">More Results</button>
+</div>
+
+
+
+
+
+
+
+
+
+<!--Yelp API retults-->
+<section class="yelp-result-wrapper">
+  <main>
+    <section id="yelp_output" style="border-top: 2px solid #B5b0b0">
+      <div id="results"></div>
+    </section>
+  </main>
+</section>
+
+
+
+
+  <section class="yelp-logo-wrapper" style="position: relative;">
+    <div>
+      <a href="./AIAssistant.html">
+        <img src="./img/chatgpt.png" alt="AI Assistant" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+
+      <a href="./ChatWithVoiceOut.html">
+        <img src="./img/AI.png" alt="AI Assistant with Voice" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+
+      <a href="./LookUp.html">
+        <img src="./img/lookup.png" alt="Look Up Image " onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+
+      <a href="./PickUpByImage.html">
+        <img src="./img/pickup.png" alt="pick up image" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+
+      <a href="./SearchByImage.html">
+        <img src="./img/searchimge.jpg" alt="search by image" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+
+      <a href="./coupon.html">
+        <img src="./img/coupon.png" alt="coupon " onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">
+      </a>
+    </div>
+
+    <!-- Tooltip span -->
+    <span id="tooltip" style="display: none; position: absolute; background-color: #F9F9F9; border: 1px solid #d4d4d4; border-radius: 4px; padding: 4px; color: black; text-align: center; font-size: 12px;"></span>
+  </section>
+
+  <script>
+  function showTooltip(img) {
+    var tooltip = document.getElementById('tooltip');
+    tooltip.textContent = img.alt;
+    tooltip.style.display = 'block';
+    tooltip.style.left = event.clientX + 10 + 'px';
+    tooltip.style.top = event.clientY + 10 + 'px';
+  }
+
+  function hideTooltip() {
+    var tooltip = document.getElementById('tooltip');
+    tooltip.style.display = 'none';
+  }
+
+            function logout(){
+              //if(user) -----> need to work on this and also on the disappearing thing.
+              firebase.auth().signOut().then(() => {
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('login').style.display = 'block';
+                alert("You are Logging Out!");
+              console.log("Bye!!!!!")
+        });
+
+            }
+                       </script>
+  </script>
+</section>
+
+<footer>
+  <section class="footer-container">
+    <div id="footer-top">
+      <div id="footer-signup">
+        <ul><a href="#" class="logo"><img src="../img/FaviconSix.png" alt="Logo" height="80" width="225"></a></ul>
+        <ul><h3>Are you prepared to start cooking?</h3></ul>
+        <ul><h4>Sign up for our site</h4></ul>
+        <!-- Signup Form -->
+        <form action="#" method="post">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="footer-options">
+        <ul><a href="#">Recipes</a></ul>
+        <ul><a href="./cardIndex.html">Quick & Easy</a></ul>
+        <ul><a href="#">Cuisine</a></ul>
+        <ul><a href="../about-us.html">About Us</a></ul>
+        <ul><a href="../login.html">Log In</a></ul>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+      </div>
+      <br>
+      <div class="row">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="row">
+        TWELVE TOMATOES © 2021 Twelve Tomatoes - All rights reserved
+      </div>
+    </div>
+  </section>
+
+  <!-- Yelp API scripts -->
+  <script src="../assets/scripts/jquery.js"></script>
+  <script src="../assets/scripts/json_app.js"></script>
+  <!--end Yelp API-->
+
+  <!--Hamburger Menu Script, Toggles dropdown visibility, menu icon state, and overlay on menu icon click-->
+  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuIcon = document.getElementById('menu-icon');
+            var dropdownContainer = document.getElementById('dropdown-container');
+            var overlay = document.getElementById('overlay');
+
+            menuIcon.addEventListener('click', function () {
+                if (dropdownContainer.style.display === 'block') {
+                    dropdownContainer.style.display = 'none';
+                    menuIcon.innerHTML = '&#9776;'; // Set the icon back to the hamburger
+                    overlay.style.display = 'none';
+                    document.body.classList.remove('overlay-open');
+                } else {
+                    dropdownContainer.style.display = 'block';
+                    menuIcon.innerHTML = '&#10005;'; // Set the icon to an "X"
+                    overlay.style.display = 'block'; // Show the overlay
+                    document.body.classList.add('overlay-open');
+                }
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 1090) {
+                        dropdownContainer.style.display = 'flex';
+                        menuIcon.innerHTML = '&#9776;';
+                        overlay.style.display = 'none'; // Unlocks screen if it is enlarged
+
+                    } else {
+                        dropdownContainer.style.display = 'none'; //Needs this or it will display flex even after close button is clicked and screen is enlarged and reduced again
+                    }
+                });
+            });
+        });
+    </script>
+</footer>
+</body>
+</html>
