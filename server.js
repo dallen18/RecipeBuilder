@@ -40,6 +40,9 @@ jsonApp.get("/api/searchRecipe", function (req, res) {
         }
     };
 
+    // Increment the page for the next fetch, more results button is not yet set for more random results
+    page++;
+
     fetch(url, options)
         .then(response => response.json())
         .then(result => {
@@ -55,10 +58,15 @@ jsonApp.get("/api/searchRecipe", function (req, res) {
 jsonApp.get(`/api/searchRecipes`, async function (req, res) {
     try {
         const recipeQuery = req.query.query;
+        const page = req.query.page || 1; // Get the page parameter or default to 1
+        console.log(`Recipe Query: ${recipeQuery}, Page: ${page}`);
+        
         if (!recipeQuery) {
             return res.status(400).json({error: "Recipe query is required."});
         }
+
         const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${encodeURIComponent(recipeQuery)}&instructionsRequired=true&fillIngredients=false&addRecipeInformation=true&ignorePantry=true&limitLicense=false&ranking=2&number=${resultsPerPage}&offset=${(page - 1) * resultsPerPage}`;
+
         const options = {
             method: 'GET',
             headers: {
@@ -66,10 +74,13 @@ jsonApp.get(`/api/searchRecipes`, async function (req, res) {
                 'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
             }
         };
+
         const response = await fetch(url, options);
+
         if (!response.ok) {
             throw new Error(`Spoonacular API Error: ${response.status} ${response.statusText}`);
         }
+
         const result = await response.json();
         res.json(result);
     } catch (error) {

@@ -21,11 +21,16 @@ function toHoursAndMinutes(totalMinutes) {
 /*Loads more recipes with the fetchRecipe function, find a way to check whether or not there's already been a search and call startRecipe
 * if no previous search has been done*/
 const loadMoreButton = document.getElementById("load-more-btn");
+let currentPage = 1;
+
+// Event listener for the "Load More" button
 loadMoreButton.addEventListener("click", function (event) {
     event.preventDefault();
     $('#recipe-results').empty();
     window.scrollTo(0, 0);
-    fetchRecipe();
+    fetchRecipe(currentPage);
+    currentPage++; // Increment for the next page
+    console.log(currentPage);
 });
 
 //Event listener for search button
@@ -47,14 +52,14 @@ async function fetchRecipe() {
         if (!response.ok) {
             throw new Error(`Error fetching recipes: ${response.status} ${response.statusText}`);
         }
-
         const result = await response.json();
         console.log(result);
 
         let container = document.createElement("div");
         container.className = "recipe-container";
         container.style.display = "grid";
-        container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        //container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        container.style.border = "solid 2px #B5b0b0";
         container.style.placeItems = "center";
 
 
@@ -85,7 +90,6 @@ async function fetchRecipe() {
             item.addEventListener("click", () => openModals(result.results[index]));
         });
 
-        page++; // Increment the page for the next fetch
     } catch (error) {
         console.error(error);
     }
@@ -196,11 +200,13 @@ async function startRecipe() {
     try {
         const response = await fetch("/api/searchRecipe");
         const result = await response.json();
+        console.log(result);
 
         let container = document.createElement("div");
         container.className = "recipe-container";
         container.style.display = "grid";
-        container.style.boxShadow = "0px 2px 10px 1px #fc1c1c";
+        container.style.border = "solid 2px #B5b0b0";
+        container.style.padding = "5px"
         container.style.placeItems = "center";
 
         let placeholder = document.querySelector("#recipe-results");
@@ -214,7 +220,7 @@ async function startRecipe() {
                         <img  src="${recipe.image}" class="recipe-image">
                     </div> 
                     <div>
-                        <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
+                        <div style="margin: 5px; padding-top: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
                         <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;"> ${timeDisplay}</p>
                         <!--find a way to center button and other items on page-->
