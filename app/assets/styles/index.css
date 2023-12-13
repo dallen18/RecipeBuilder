@@ -250,6 +250,15 @@ header ul li a {
     opacity: 75%
 }
 
+#search-btn {
+    background: transparent;
+    color: white;
+    border-radius: 40px 40px 40px 40px;
+    height: 60px;
+    width: 80px;
+    margin-left: 40px;
+}
+
 #search-bar button {
     border: 0;
     border-radius: 50%;
