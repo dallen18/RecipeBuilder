@@ -18,7 +18,7 @@ function toHoursAndMinutes(totalMinutes) {
     return {hours, minutes};
 }
 
-/*Loads more recipes with the fetchRecipe function, find a way to check whether or not there's already been a search and call startRecipe
+/*Loads more recipes with the fetchRecipe function, find a way to check whether there's already been a search and call startRecipe
 * if no previous search has been done*/
 const loadMoreButton = document.getElementById("load-more-btn");
 let currentPage = 1;
@@ -30,7 +30,6 @@ loadMoreButton.addEventListener("click", function (event) {
     window.scrollTo(0, 0);
     fetchRecipe(currentPage);
     currentPage++; // Increment for the next page
-    console.log(currentPage);
 });
 
 //Event listener for search button
@@ -53,7 +52,6 @@ async function fetchRecipe() {
             throw new Error(`Error fetching recipes: ${response.status} ${response.statusText}`);
         }
         const result = await response.json();
-        console.log(result);
 
         let container = document.createElement("div");
         container.className = "recipe-container";
@@ -71,12 +69,12 @@ async function fetchRecipe() {
             out += `
                 <div class="recipe-item" style="justify-content: center";>
                     <div>
-                        <img  src="${recipe.image}" class="recipe-image">
+                        <img  src="${recipe.image}" class="recipe-image" alt="Image of recipe item return from API">
                     </div> 
                     <div>
                         <div style="margin: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;"> ${timeDisplay}</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;" alt="red timer for cook time"> ${timeDisplay}</p>
                         <button class="recipe-details-btn">View Details</button>
                     </div>
                 </div>
@@ -104,7 +102,7 @@ function openModal(recipe) {
     const modalSummary = document.getElementById("modalSummary");
 
     // Create and set modal title with image
-    modalTitle.innerHTML = `<img src="img/spatula.png" style="width: 85px; height: 25px; margin-right: 25px; " alt="Recipe Image" class="modal-image">${recipe.title}`;
+    modalTitle.innerHTML = `<img src="img/spatula.png" style="width: 85px; height: 25px; margin-right: 25px; " alt="red spatula" class="modal-image">${recipe.title}`;
 
     // Extract and process the steps from the provided HTML
     const stepsHtml = recipe.instructions;
@@ -200,7 +198,6 @@ async function startRecipe() {
     try {
         const response = await fetch("/api/searchRecipe");
         const result = await response.json();
-        console.log(result);
 
         let container = document.createElement("div");
         container.className = "recipe-container";
@@ -217,12 +214,12 @@ async function startRecipe() {
             out += `
                 <div class="recipe-item" style="justify-content: center";>
                     <div>
-                        <img  src="${recipe.image}" class="recipe-image">
+                        <img  src="${recipe.image}" class="recipe-image" alt="Image of recipe item return from API">
                     </div> 
                     <div>
                         <div style="margin: 5px; padding-top: 5px;">${recipe.dishTypes[0]}</div>
                         <h1 style="margin: 5px; font-size: 25px ;">${recipe.title}</h1>
-                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;"> ${timeDisplay}</p>
+                        <p><img src="../img/red-timer.png" id="timer" style="height: 20px; width: 20px;" alt="red timer for cook time"> ${timeDisplay}</p>
                         <!--find a way to center button and other items on page-->
                         <button class="recipe-details-btn">View Details</button>
                     </div>

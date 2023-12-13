@@ -59,8 +59,7 @@ jsonApp.get(`/api/searchRecipes`, async function (req, res) {
     try {
         const recipeQuery = req.query.query;
         const page = req.query.page || 1; // Get the page parameter or default to 1
-        console.log(`Recipe Query: ${recipeQuery}, Page: ${page}`);
-        
+
         if (!recipeQuery) {
             return res.status(400).json({error: "Recipe query is required."});
         }
@@ -122,8 +121,7 @@ async function ipFunct() {
     };
     try {
         const response = await fetch(url, options);
-        const result = await response.json();
-        const ip = result;
+        const ip = await response.json();
         const latitude = ip.location.latitude;
         const longitude = ip.location.longitude;
         return {latitude, longitude};
