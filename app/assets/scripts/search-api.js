@@ -3,13 +3,6 @@ window.onload = () => {
     startRecipe();
 };
 
-function checkInput() {
-    const recipeInput = document.getElementById('search-bar').value;
-    if (recipeInput.length === 0) {
-        alert("Please enter a recipe name");
-    }
-}
-
 //Converts minutes to hours if minutes exceed 60
 //Taken from https://plainenglish.io/blog/javascript-convert-minutes-to-hours-and-minutes
 function toHoursAndMinutes(totalMinutes) {
