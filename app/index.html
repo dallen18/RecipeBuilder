@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="image/png" href="img/faviconOne.png" src="img/faviconOne.png"/>
+    <link rel="icon" type="image/png" href="img/favicon-one.png" src="img/favicon-one.png"/>
     <title>Twelve Tomatoes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +51,7 @@
 <div id="overlay"></div>
 <header>
     <div class="logo">
-        <a href="#" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80" width="225">
-        </a>
+        <a href="#" class="logo"><img rel="log" type="image/png" src="img/favicon-six.png" height="80" width="225"></a>
     </div>
     <nav>
         <div id="menu-icon">&#9776;</div>
@@ -108,7 +107,8 @@
                 </button>
             </div>
             <div class="dropdown" id="login">
-                <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                <button
+                        class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
                                                                                           href="signup.html">SIGN UP</a>
                 </button>
             </div>
@@ -182,29 +182,29 @@
 
         <div class=team-img>
             <div class="img-container">
-                <img class="team-imgs" src="img/deontaeImage.jpg" alt="picture of Deontae">
+                <img class="team-imgs" src="img/deontae.jpg" alt="picture of Deontae">
                 <h4>Deontae Allen</h4>
                 <h4 class="position">Front-End/ <br>Back-End Developer</h4>
             </div>
             <div class="img-container">
                 <img class="team-imgs" src="img/ennupic.jpg" alt="picture of Anosh">
                 <h4>Anosh Kudikala</h4>
-                <h4 class="position">Front-End</h4>
+                <h4 class="position">Front-End Developer</h4>
             </div>
             <div class="img-container">
-                <img class="team-imgs" src="img/Dhathri.jpg" alt="picture of Dhathri">
+                <img class="team-imgs" src="img/dhathri.jpg" alt="picture of Dhathri">
                 <h4>Dhathri Bathini</h4>
                 <h4 class="position">Front-End/ <br>Back-End Developer</h4>
             </div>
             <div class="img-container">
-                <img class="team-imgs" src="img/Haosen.jpg" alt="Missing photo image">
+                <img class="team-imgs" src="img/haosen.jpg" alt="picture of Haosen">
                 <h4>Haosen Han</h4>
-                <h4 class="position">Position</h4>
+                <h4 class="position">Front-End Developer</h4>
             </div>
             <div class="img-container">
-                <img class="team-imgs" src="img/rushikesh.png" alt="Missing photo image">
+                <img class="team-imgs" src="img/rushikesh.png" alt="picture of Rushikesh">
                 <h4>Rushikesh Shirsat</h4>
-                <h4 class="position">Position</h4>
+                <h4 class="position">Back-End Developer</h4>
             </div>
         </div>
     </div>
@@ -243,7 +243,7 @@
             <div id="footer-signup">
                 <ul>
                     <a href="#" class="logo">
-                        <img src="img/faviconSix.png" alt="Logo" height="80" width="225">
+                        <img src="img/favicon-six.png" alt="Logo" height="80" width="225">
                     </a>
                 </ul>
                 <ul>
@@ -293,40 +293,8 @@
     <!-- Yelp API scripts -->
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/json_app.js"></script>
-    <!-- end Yelp API -->
     <!-- Hamburger Menu Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuIcon = document.getElementById('menu-icon');
-            var dropdownContainer = document.getElementById('dropdown-container');
-            var overlay = document.getElementById('overlay');
-
-            menuIcon.addEventListener('click', function () {
-                if (dropdownContainer.style.display === 'block') {
-                    dropdownContainer.style.display = 'none';
-                    menuIcon.innerHTML = '&#9776;'; // Set the icon back to the hamburger
-                    overlay.style.display = 'none';
-                    document.body.classList.remove('overlay-open');
-                } else {
-                    dropdownContainer.style.display = 'block';
-                    menuIcon.innerHTML = '&#10005;'; // Set the icon to an "X"
-                    overlay.style.display = 'block'; // Show the overlay
-                    document.body.classList.add('overlay-open');
-                }
-
-                window.addEventListener('resize', function () {
-                    if (window.innerWidth > 1090) {
-                        dropdownContainer.style.display = 'flex';
-                        menuIcon.innerHTML = '&#9776;';
-                        overlay.style.display = 'none'; // Unlocks screen if it is enlarged
-
-                    } else {
-                        dropdownContainer.style.display = 'none'; // Needs this or it will display flex even after close button is clicked and screen is enlarged and reduced again
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="./assets/scripts/hamburger-menu.js"></script>
 </footer>
 </body>
 </html>

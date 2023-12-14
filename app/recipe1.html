@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <link rel="icon" type="image/png" href="img/faviconOne.png"/>
+    <link rel="icon" type="image/png" href="img/favicon-one.png"/>
     <title>Twelve Tomatoes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -47,77 +47,99 @@
 </head>
 <body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+<div id="overlay"></div>
+<script> AOS.init();</script>
 <div class="row">
     <header>
         <div>
-            <a href="index.html" class="logo"><img rel="log" type="image/png" src="img/faviconSix.png" height="80"
+            <a href="index.html" class="logo"><img rel="log" type="image/png" src="img/favicon-six.png" height="80"
                                                    width="225" alt="logo"/></a>
         </div>
-        <div id="dropdown-container">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    RECIPES<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Main Course</a>
-                    <a href="#">Side Dish</a>
-                    <a href="#">Dessert</a>
-                    <a href="#">Appetizer</a>
-                    <a href="#">Salad</a>
-                    <a href="#">Bread</a>
-                    <a href="#">Breakfast</a>
-                    <a href="#">Soup</a>
-                    <a href="#">Beverage</a>
-                    <a href="#">Sauce</a>
-                    <a href="#">Drink</a>
+        <nav>
+            <div id="menu-icon">&#9776;</div>
+            <div id="dropdown-container">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        RECIPES<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Main Course</a>
+                        <a href="#">Side Dish</a>
+                        <a href="#">Dessert</a>
+                        <a href="#">Appetizer</a>
+                        <a href="#">Salad</a>
+                        <a href="#">Bread</a>
+                        <a href="#">Breakfast</a>
+                        <a href="#">Soup</a>
+                        <a href="#">Beverage</a>
+                        <a href="#">Sauce</a>
+                        <a href="#">Drink</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        QUICK & EASY<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="recipe1.html">Chilli Oil Noodles</a>
+                        <a href="recipe2.html">Pumpkin Pancakes</a>
+                        <a href="recipe3.html">Basic Biscuits</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        CUISINE<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">African</a>
+                        <a href="#">Chinese</a>
+                        <a href="#">Japanese</a>
+                        <a href="#">Korean</a>
+                        <a href="#">Thai</a>
+                        <a href="#">Indian</a>
+                        <a href="#">British</a>
+                        <a href="#">Irish</a>
+                        <a href="#">French</a>
+                        <a href="#">Mexican</a>
+                        <a href="#">American</a>
+                        <a href="#">Middle Eastern</a>
+                        <a href="#">Cajun</a>
+                        <a href="#">Greek</a>
+                        <a href="#">Caribbean</a>
+                        <a href="#">Latin American</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a class="dropbtn" href="about-us.html">ABOUT US</a>
+                    </button>
+                </div>
+                <div class="dropdown" id="login">
+                    <button
+                            class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                              href="signup.html">SIGN
+                        UP</a>
+                    </button>
+                </div>
+                <div class="dropdown" id="logout" style="display:none;">
+                    <button class="dropbtn" id="user-email">Hi User!
+                        <span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropbtn">PROFILE</a>
+                        <a href="#" class="dropbtn">SAVED RECIPES</a>
+                        <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+                    </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    QUICK & EASY<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="recipe1.html">Chilli Oil Noodles</a>
-                    <a href="recipe2.html">Pumpkin Pancakes</a>
-                    <a href="recipe3.html">Basic Biscuits</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    CUISINE<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">African</a>
-                    <a href="#">Chinese</a>
-                    <a href="#">Japanese</a>
-                    <a href="#">Korean</a>
-                    <a href="#">Thai</a>
-                    <a href="#">Indian</a>
-                    <a href="#">British</a>
-                    <a href="#">Irish</a>
-                    <a href="#">French</a>
-                    <a href="#">Mexican</a>
-                    <a href="#">American</a>
-                    <a href="#">Middle Eastern</a>
-                    <a href="#">Cajun</a>
-                    <a href="#">Greek</a>
-                    <a href="#">Caribbean</a>
-                    <a href="#">Latin American</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <a class="dropbtn" href="login.html">LOGIN</a>
-                </button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <a class="dropbtn" href="signup.html">SIGN UP</a>
-                </button>
-            </div>
+        </nav>
+        <div class="mainMenu">
+            <ul class="mainMenu">
+                <span id="follow">follow</span>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
         </div>
     </header>
 </div>
@@ -129,15 +151,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div
-                            class="recipe-detail__header"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-delay="0"
-                    >
-                        <h1 class="recipe-detail__heading">
-                            Garlic Chilli Oil Noodles
-                        </h1>
+                    <div class="recipe-detail__header" data-aos="fade-up" data-aos-easing="ease-in-out"
+                         data-aos-delay="0">
+                        <h1 class="recipe-detail__heading">Garlic Chilli Oil Noodles</h1>
                         <p class="recipe-detail__date">Nov 15, 2023</p>
                         <ul class="recipe-detail__rating">
                             <li><i class="fas fa-star"></i></li>
@@ -151,12 +167,7 @@
             </div>
 
             <div class="row">
-                <div
-                        class="col-12 col-lg-5"
-                        data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-delay="200"
-                >
+                <div class="col-12 col-lg-5" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="200">
                     <div class="recipe-detail__box">
                         <div class="recipe-detail__summary">
                             <p>Prep: 5 mins</p>
@@ -169,63 +180,51 @@
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-1"/>
-                                        <label for="box-1" class="square"
-                                        >1 package ramen noodles</label
-                                        >
+                                        <label for="box-1" class="square">1 package ramen noodles</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-2"/>
-                                        <label for="box-2" class="square"
-                                        >2 teaspoons sesame oil</label
-                                        >
+                                        <label for="box-2" class="square">2 teaspoons sesame oil</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-3"/>
-                                        <label for="box-3" class="square"
-                                        >2 teaspoons soy sauce</label
-                                        >
+                                        <label for="box-3" class="square">2 teaspoons soy sauce</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-4"/>
-                                        <label for="box-4" class="square"
-                                        >1 tablespoon chiu chow style chilli Oil</label
-                                        >
+                                        <label for="box-4" class="square">1 tablespoon chiu chow style chilli
+                                            Oil</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-5"/>
-                                        <label for="box-5" class="square"
-                                        >4 cloves garlic, minced</label
-                                        >
+                                        <label for="box-5" class="square">4 cloves garlic, minced</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-6"/>
-                                        <label for="box-6" class="square"
-                                        >1 pinch black sesame seeds</label
-                                        >
+                                        <label for="box-6" class="square">1 pinch black sesame seeds</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >2 green onions, sliced diagonally, or to taste</label
-                                        >
+                                        <label for="box-7" class="square">2 green onions, sliced diagonally, or to
+                                            taste</label>
                                     </div>
                                 </li>
                             </ul>
@@ -235,11 +234,7 @@
 
                 <div class="col-12 col-lg-7">
                     <ul class="recipe-detail__content">
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="200"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="200">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">01.</h2>
                                 <p class="recipe-detail__description">
@@ -249,11 +244,7 @@
                             </div>
                         </li>
 
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="300"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="300">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">02.</h2>
                                 <p class="recipe-detail__description">
@@ -263,11 +254,7 @@
                             </div>
                         </li>
 
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="400"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="400">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">03.</h2>
                                 <p class="recipe-detail__description">
@@ -279,11 +266,7 @@
                             </div>
                         </li>
 
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="500"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="500">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">Note:</h2>
                                 <p class="recipe-detail__description">
@@ -304,7 +287,7 @@
     <section class="footer-container">
         <div id="footer-top">
             <div id="footer-signup">
-                <ul><a href="#" class="logo"><img src="img/faviconSix.png" alt="Logo" height="80" width="225"></a></ul>
+                <ul><a href="#" class="logo"><img src="img/favicon-six.png" alt="Logo" height="80" width="225"></a></ul>
                 <ul><h3>Are you prepared to start cooking?</h3></ul>
                 <ul><h4>Sign up for our site</h4></ul>
                 <!-- Signup Form -->
@@ -345,45 +328,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Yelp API scripts -->
-    <script src="./assets/scripts/jquery.js"></script>
-    <script src="./assets/scripts/json_app.js"></script>
-    <!--end Yelp API-->
-
     <!--Hamburger Menu Script, Toggles dropdown visibility, menu icon state, and overlay on menu icon click-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuIcon = document.getElementById('menu-icon');
-            var dropdownContainer = document.getElementById('dropdown-container');
-            var overlay = document.getElementById('overlay');
-
-            menuIcon.addEventListener('click', function () {
-                if (dropdownContainer.style.display === 'block') {
-                    dropdownContainer.style.display = 'none';
-                    menuIcon.innerHTML = '&#9776;'; // Set the icon back to the hamburger
-                    overlay.style.display = 'none';
-                    document.body.classList.remove('overlay-open');
-                } else {
-                    dropdownContainer.style.display = 'block';
-                    menuIcon.innerHTML = '&#10005;'; // Set the icon to an "X"
-                    overlay.style.display = 'block'; // Show the overlay
-                    document.body.classList.add('overlay-open');
-                }
-
-                window.addEventListener('resize', function () {
-                    if (window.innerWidth > 1090) {
-                        dropdownContainer.style.display = 'flex';
-                        menuIcon.innerHTML = '&#9776;';
-                        overlay.style.display = 'none'; // Unlocks screen if it is enlarged
-
-                    } else {
-                        dropdownContainer.style.display = 'none'; //Needs this or it will display flex even after close button is clicked and screen is enlarged and reduced again
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="./assets/scripts/hamburger-menu.js"></script>
 </footer>
 </body>
 </html>

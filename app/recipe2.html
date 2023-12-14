@@ -2,67 +2,24 @@
 
 <html>
 <head>
-    <link
-            rel="icon"
-            type="image/png"
-            href="img/faviconOne.png"
-    />
+    <link rel="icon" type="image/png" href="img/favicon-one.png"/>
     <title>Twelve Tomatoes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-    />
-    <script src="./assets/scripts/search-api.js" async></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!--FONT AWESOME-->
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            type="text/css"
-            rel="stylesheet"
-            href="./assets/bootstrap/css/bootstrap.min.css"
-    />
-    <script
-            type="text/javascript"
-            src="./assets/bootstrap/js/jquery-3.5.1.min.js"
-    ></script>
-    <script
-            type="text/javascript"
-            src="./assets/bootstrap/js/bootstrap.min.js"
-    ></script>
-    <link
-            rel="stylesheet"
-            type="text/css"
-            href="./assets/styles/recipe-detail.css"
-    />
-    <link href="./assets/styles/index.css" rel="stylesheet" type="text/css"/>
-    <script
-            src="https://kit.fontawesome.com/a076d05399.js"
-            crossorigin="anonymous"
-    ></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/recipe-detail.css"/>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script type="module">
@@ -81,92 +38,108 @@
         const app = firebase.initializeApp(firebaseConfig);
     </script>
     <link href="./assets/styles/style.css" rel="stylesheet" type="text/css"/>
-    <link href="./assets/styles/header-footer.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Login</title>
+    <link rel="stylesheet" href="./assets/styles/style.css"/>
+    <link rel="stylesheet" href="./assets/styles/header-footer.css"/>
+    <title>Pumpkin Pancakes</title>
 </head>
 <body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+<div id="overlay"></div>
+<script> AOS.init();</script>
 <div class="row">
     <header>
         <div>
-            <a href="index.html" class="logo"
-            ><img
-                    rel="log"
-                    type="image/png"
-                    src="img/faviconSix.png"
-                    height="80"
-                    width="225"
-            />
-            </a>
+            <a href="index.html" class="logo"><img rel="log" type="image/png" src="img/favicon-six.png" height="80"
+                                                   width="225" alt="logo"/></a>
         </div>
-        <div id="dropdown-container">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    RECIPES<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Main Course</a>
-                    <a href="#">Side Dish</a>
-                    <a href="#">Dessert</a>
-                    <a href="#">Appetizer</a>
-                    <a href="#">Salad</a>
-                    <a href="#">Bread</a>
-                    <a href="#">Breakfast</a>
-                    <a href="#">Soup</a>
-                    <a href="#">Beverage</a>
-                    <a href="#">Sauce</a>
-                    <a href="#">Drink</a>
+        <nav>
+            <div id="menu-icon">&#9776;</div>
+            <div id="dropdown-container">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        RECIPES<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Main Course</a>
+                        <a href="#">Side Dish</a>
+                        <a href="#">Dessert</a>
+                        <a href="#">Appetizer</a>
+                        <a href="#">Salad</a>
+                        <a href="#">Bread</a>
+                        <a href="#">Breakfast</a>
+                        <a href="#">Soup</a>
+                        <a href="#">Beverage</a>
+                        <a href="#">Sauce</a>
+                        <a href="#">Drink</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        QUICK & EASY<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="recipe1.html">Chilli Oil Noodles</a>
+                        <a href="recipe2.html">Pumpkin Pancakes</a>
+                        <a href="recipe3.html">Basic Biscuits</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        CUISINE<span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">African</a>
+                        <a href="#">Chinese</a>
+                        <a href="#">Japanese</a>
+                        <a href="#">Korean</a>
+                        <a href="#">Thai</a>
+                        <a href="#">Indian</a>
+                        <a href="#">British</a>
+                        <a href="#">Irish</a>
+                        <a href="#">French</a>
+                        <a href="#">Mexican</a>
+                        <a href="#">American</a>
+                        <a href="#">Middle Eastern</a>
+                        <a href="#">Cajun</a>
+                        <a href="#">Greek</a>
+                        <a href="#">Caribbean</a>
+                        <a href="#">Latin American</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a class="dropbtn" href="about-us.html">ABOUT US</a>
+                    </button>
+                </div>
+                <div class="dropdown" id="login">
+                    <button
+                            class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                              href="signup.html">SIGN
+                        UP</a>
+                    </button>
+                </div>
+                <div class="dropdown" id="logout" style="display:none;">
+                    <button class="dropbtn" id="user-email">Hi User!
+                        <span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropbtn">PROFILE</a>
+                        <a href="#" class="dropbtn">SAVED RECIPES</a>
+                        <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+                    </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    QUICK & EASY<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="recipe1.html">Chilli Oil Noodles</a>
-                    <a href="recipe2.html">Pumpkin Pancakes</a>
-                    <a href="recipe3.html">Basic Biscuits</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    CUISINE<span><i class="arrow down"></i></span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">African</a>
-                    <a href="#">Chinese</a>
-                    <a href="#">Japanese</a>
-                    <a href="#">Korean</a>
-                    <a href="#">Thai</a>
-                    <a href="#">Indian</a>
-                    <a href="#">British</a>
-                    <a href="#">Irish</a>
-                    <a href="#">French</a>
-                    <a href="#">Mexican</a>
-                    <a href="#">American</a>
-                    <a href="#">Middle Eastern</a>
-                    <a href="#">Cajun</a>
-                    <a href="#">Greek</a>
-                    <a href="#">Caribbean</a>
-                    <a href="#">Latin American</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <a class="dropbtn" href="login.html">LOGIN</a>
-                </button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <a class="dropbtn" href="signup.html">SIGN UP</a>
-                </button>
-            </div>
+        </nav>
+        <div class="mainMenu">
+            <ul class="mainMenu">
+                <span id="follow">follow</span>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
         </div>
     </header>
 </div>
@@ -178,12 +151,8 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div
-                            class="recipe-detail__header"
-                            data-aos="fade-up"
-                            data-aos-easing="ease-in-out"
-                            data-aos-delay="0"
-                    >
+                    <div class="recipe-detail__header" data-aos="fade-up" data-aos-easing="ease-in-out"
+                         data-aos-delay="0">
                         <h1 class="recipe-detail__heading">
                             Buttermilk Pumpkin Pancakes
                         </h1>
@@ -201,12 +170,7 @@
             </div>
 
             <div class="row">
-                <div
-                        class="col-12 col-lg-5"
-                        data-aos="fade-right"
-                        data-aos-easing="linear"
-                        data-aos-delay="200"
-                >
+                <div class="col-12 col-lg-5" data-aos="fade-right" data-aos-easing="linear" data-aos-delay="200">
                     <div class="recipe-detail__box">
                         <div class="recipe-detail__summary">
                             <p>Prep: 10 mins</p>
@@ -219,101 +183,79 @@
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-1"/>
-                                        <label for="box-1" class="square"
-                                        >1 cup all-purpose flour</label
-                                        >
+                                        <label for="box-1" class="square">1 cup all-purpose flour</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-2"/>
-                                        <label for="box-2" class="square"
-                                        >2 tablespoons white sugar</label
-                                        >
+                                        <label for="box-2" class="square">2 tablespoons white sugar</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-3"/>
-                                        <label for="box-3" class="square"
-                                        >1 tablespoon pumpkin pie spice</label
-                                        >
+                                        <label for="box-3" class="square">1 tablespoon pumpkin pie spice</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-4"/>
-                                        <label for="box-4" class="square"
-                                        >1 teaspoon baking powder</label
-                                        >
+                                        <label for="box-4" class="square">1 teaspoon baking powder</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-5"/>
-                                        <label for="box-5" class="square"
-                                        >1 teaspoon baking soda</label
-                                        >
+                                        <label for="box-5" class="square">1 teaspoon baking soda</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-6"/>
-                                        <label for="box-6" class="square"
-                                        >½ teaspoon salt</label
-                                        >
+                                        <label for="box-6" class="square">½ teaspoon salt</label>
                                     </div>
                                 </li>
 
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
                                         <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >1 cup buttermilk</label
-                                        >
+                                        <label for="box-7" class="square">1 cup buttermilk</label>
                                     </div>
                                 </li>
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
-                                        <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >½ cup canned pumpkin</label
-                                        >
+                                        <input type="checkbox" name="checkbox" id="box-8"/>
+                                        <label for="box-8" class="square">½ cup canned pumpkin</label>
                                     </div>
                                 </li>
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
-                                        <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >¼ cup canola oil</label
-                                        >
+                                        <input type="checkbox" name="checkbox" id="box-9"/>
+                                        <label for="box-9" class="square">¼ cup canola oil</label>
                                     </div>
                                 </li>
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
-                                        <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square">2 large eggs</label>
+                                        <input type="checkbox" name="checkbox" id="box-10"/>
+                                        <label for="box-10" class="square">2 large eggs</label>
                                     </div>
                                 </li>
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
-                                        <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >1 teaspoon vanilla extract</label
-                                        >
+                                        <input type="checkbox" name="checkbox" id="box-11"/>
+                                        <label for="box-11" class="square">1 teaspoon vanilla extract</label>
                                     </div>
                                 </li>
                                 <li class="recipe-detail__check-box-item">
                                     <div class="form-group">
-                                        <input type="checkbox" name="checkbox" id="box-7"/>
-                                        <label for="box-7" class="square"
-                                        >1 serving nonstick cooking spray</label
-                                        >
+                                        <input type="checkbox" name="checkbox" id="box-12"/>
+                                        <label for="box-12" class="square">1 serving nonstick cooking spray</label>
                                     </div>
                                 </li>
                             </ul>
@@ -323,11 +265,7 @@
 
                 <div class="col-12 col-lg-7">
                     <ul class="recipe-detail__content">
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="200"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="200">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">01.</h2>
                                 <p class="recipe-detail__description">
@@ -339,11 +277,7 @@
                             </div>
                         </li>
 
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="300"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="300">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">02.</h2>
                                 <p class="recipe-detail__description">
@@ -353,11 +287,7 @@
                             </div>
                         </li>
 
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="400"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="400">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">03.</h2>
                                 <p class="recipe-detail__description">
@@ -368,11 +298,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li
-                                data-aos="fade-left"
-                                data-aos-easing="linear"
-                                data-aos-delay="400"
-                        >
+                        <li data-aos="fade-left" data-aos-easing="linear" data-aos-delay="400">
                             <div class="recipe-detail__item">
                                 <h2 class="recipe-detail__number">04.</h2>
                                 <p class="recipe-detail__description">
@@ -391,7 +317,7 @@
     <section class="footer-container">
         <div id="footer-top">
             <div id="footer-signup">
-                <ul><a href="#" class="logo"><img src="img/faviconSix.png" alt="Logo" height="80" width="225"></a></ul>
+                <ul><a href="#" class="logo"><img src="img/favicon-six.png" alt="Logo" height="80" width="225"></a></ul>
                 <ul><h3>Are you prepared to start cooking?</h3></ul>
                 <ul><h4>Sign up for our site</h4></ul>
                 <!-- Signup Form -->
@@ -432,45 +358,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Yelp API scripts -->
-    <script src="./assets/scripts/jquery.js"></script>
-    <script src="./assets/scripts/json_app.js"></script>
-    <!--end Yelp API-->
-
     <!--Hamburger Menu Script, Toggles dropdown visibility, menu icon state, and overlay on menu icon click-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuIcon = document.getElementById('menu-icon');
-            var dropdownContainer = document.getElementById('dropdown-container');
-            var overlay = document.getElementById('overlay');
-
-            menuIcon.addEventListener('click', function () {
-                if (dropdownContainer.style.display === 'block') {
-                    dropdownContainer.style.display = 'none';
-                    menuIcon.innerHTML = '&#9776;'; // Set the icon back to the hamburger
-                    overlay.style.display = 'none';
-                    document.body.classList.remove('overlay-open');
-                } else {
-                    dropdownContainer.style.display = 'block';
-                    menuIcon.innerHTML = '&#10005;'; // Set the icon to an "X"
-                    overlay.style.display = 'block'; // Show the overlay
-                    document.body.classList.add('overlay-open');
-                }
-
-                window.addEventListener('resize', function () {
-                    if (window.innerWidth > 1090) {
-                        dropdownContainer.style.display = 'flex';
-                        menuIcon.innerHTML = '&#9776;';
-                        overlay.style.display = 'none'; // Unlocks screen if it is enlarged
-
-                    } else {
-                        dropdownContainer.style.display = 'none'; //Needs this or it will display flex even after close button is clicked and screen is enlarged and reduced again
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="./assets/scripts/hamburger-menu.js"></script>
 </footer>
 </body>
 </html>
