@@ -53,7 +53,8 @@ button.dropbtn {
 }
 
 body {
-    min-height: 200vh;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -150,7 +151,7 @@ header .logo {
 }
 
 .dropdown:hover .dropbtn {
-
+    background-color: #B5b0b0;
 }
 
 header ul {
@@ -197,7 +198,7 @@ header ul li a {
     background-size: cover;
     /* -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));*/
     margin-bottom: 0px;
-    background-image: url('../img/greybackground1.jpeg');
+    background-image: url('../img/grey-background1.jpeg');
 }
 
 .search-bar-container {
@@ -470,11 +471,6 @@ tn {
     background-color: white;
     color: black;
     font-size: 14px;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
 }
 
 .footer {

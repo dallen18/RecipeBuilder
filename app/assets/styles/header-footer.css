@@ -14,11 +14,21 @@ a {
     color: #fc1c1c;
 }
 
+footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+footer .row a {
+    color: grey;
+}
+
 button {
     border-radius: 3px;
     background-color: rgb(181, 176, 176, .3);
     padding: 2px;
     border: none;
+
 }
 
 button:hover {
@@ -54,10 +64,6 @@ button.dropbtn {
     font-size: 16px;
     background-color: white;
     text-decoration: none;
-}
-
-body {
-    min-height: 200vh;
 }
 
 header {
@@ -202,7 +208,7 @@ header ul li a {
     background-size: cover;
     /* -webkit-mask-image: linear-gradient(white, rgba(0, 0, 0, 0));*/
     margin-bottom: 0px;
-    background-image: url('../img/greybackground1.jpeg');
+    background-image: url('../img/grey-background1.jpeg');
 }
 
 
@@ -289,213 +295,13 @@ tn {
     color: white;
 }
 
-/*end of test*/
-
-/*
-.search-bar-container {
-    display: flex;
-    width: 100%;
-    height: 40vh;
-    align-items: center;
-    justify-content: center;
-}
-
-form {
-    margin-top: 17vh;
-    height: 60px;
-    width: 600px;
-    display: flex;
-    background-color: white;
-    border: solid #B5b0b0;
-}
-
-form input {
-    flex: 1;
-    background-color: white;
-    border: none;
-    outline: none;
-}
-
-form button {
-    background: #B5b0b0;
-    padding: 10px 50px;
-    border: none;
-    outline: none;
-    color: white;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-size: 17px;
-}
-
-form .fa-search {
-    align-self: center;
-    padding: 10px 20px;
-}
-*/
 #follow {
     color: #B5b0b0;
     font-family: sans-serif;
 }
 
-/*#search-bar {
-    font-family: sans-serif;
-    font-size: large;
-    padding-left: 14px;
-    align-items: center;
-    justify-content: center;
-}*/
-
-
-.article-section {
-    margin-top: 7vh;
-    margin-bottom: 10px;
-    display: grid;
-    place-items: center center;
-    justify-content: center;
-
-    /* background: rgb(233, 233, 240);
-     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 10%, rgba(247, 242, 216, 1) 45%, rgba(255, 255, 255, 1) 90%);*/
-
-    background: linear-gradient(0deg, rgba(247, 242, 216, 1) 35%, rgba(255, 255, 255, 1) 90%);
-    /*background-color: rgba(163, 139, 134, .15);*/
-}
-
-.article-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    grid-gap: 30px;
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-.article {
-    border-radius: 2px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
-    min-height: 400px;
-    max-width: 366px;
-    background-color: white;
-    cursor: pointer;
-}
-
-#article-heading {
-    color: #fc1c1c;
-    font-family: 'Lora';
-    font-size: 22px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: #B5b0b0 underline;
-}
-
-.article-img {
-    max-width: 366px;
-    max-height: 244px;
-    display: block;
-    border-radius: 2px 2px 0 0;
-}
-
 .container {
     position: relative;
-}
-
-/* Team member section and Yelp logo*/
-.team-members {
-    background-color: white;
-    display: grid;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.team-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 10px;
-    padding: 10px;
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-#team-intro {
-    display: grid;
-    grid-template-rows: 100px 160px auto;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    padding: 10px;
-    margin-right: 50px;
-}
-
-#spatula {
-    max-height: 110px;
-    max-width: 110px;
-}
-
-.team-img {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-    font-family: Helvetica;
-    background-color: rgb(181, 176, 176, .3);
-}
-
-.team-imgs {
-    max-width: 160px;
-    max-height: 160px;
-    flex-wrap: wrap;
-    border-radius: 50%;
-    border: 2px solid #fc1c1c;
-    border-color: #fc1c1c;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.img-container {
-    padding: 10px;
-    font-family: Helvetica;
-    color: #fc1c1c;
-}
-
-.details {
-    padding: 30px;
-    font-family: sans-serif;
-}
-
-.details h4 {
-    margin-bottom: 10px;
-    color: #fc1c1c;
-}
-
-.position {
-    color: black;
-}
-
-#yelp-logo {
-    height: 200px;
-    width: 370px;
-    margin-left: 100px;
-}
-
-/*Load more button*/
-#load-more-btn-wrapper {
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    display: flex;
-    font-color: white;
-    font-size: 25px;
-    margin-top: 20px;
-}
-
-#load-more-btn {
-    font-size: 25px;
 }
 
 /*footer display*/
