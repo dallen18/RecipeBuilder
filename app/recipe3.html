@@ -41,7 +41,6 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./assets/styles/style.css"/>
     <link rel="stylesheet" href="./assets/styles/header-footer.css"/>
     <title>Basic Biscuits</title>
 </head>
@@ -111,8 +110,25 @@
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a class="dropbtn" href="login.html">LOGIN</a>
+                        <a class="dropbtn" href="about-us.html">ABOUT US</a>
                     </button>
+                </div>
+                <div class="dropdown" id="login">
+                    <button
+                            class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                              href="signup.html">SIGN
+                        UP</a>
+                    </button>
+                </div>
+                <div class="dropdown" id="logout" style="display:none;">
+                    <button class="dropbtn" id="user-email">Hi User!
+                        <span><i class="arrow down"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropbtn">PROFILE</a>
+                        <a href="#" class="dropbtn">SAVED RECIPES</a>
+                        <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+                    </div>
                 </div>
             </div>
         </nav>

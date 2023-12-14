@@ -609,6 +609,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent background */
     z-index: 2;
+/
 }
 
 /* Add this rule to disable scrolling when the overlay is displayed */

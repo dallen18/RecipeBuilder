@@ -1,112 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="icon" type="image/png" href="img/favicon-one.png" alt="favicon logo"/>
-    <link rel="stylesheet" type="text/css" href="assets/styles/header-footer.css">
-    <meta charset="UTF-8">
-    <title>About Us</title>
+    <link rel="icon" type="image/png" href="img/favicon-one.png" src="img/favicon-one.png"/>
+    <title>Twelve Tomatoes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/styles/header-footer.css"/>
+    <link rel="stylesheet" href="./assets/styles/about-us.css"/>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script type="module">
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import {getAnalytics} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import {getAuth} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCATUhWa7w5gYlUVUHwIEUSxUZil6z7WgE",
+            authDomain: "foodrecipe-77827.firebaseapp.com",
+            projectId: "foodrecipe-77827",
+            storageBucket: "foodrecipe-77827.appspot.com",
+            messagingSenderId: "194158679612",
+            appId: "1:194158679612:web:c1e9d25588bfb7ae739539",
+            //measurementId: "G-EL7WSPTK41"
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('logout').style.display = 'block';
+            }
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <div>
-        <a href="index.html" class="logo"><img rel="log" type="image/png" src="img/favicon-six.png" height="80"
-                                               width="225" alt="logo"></a>
+    <div id="overlay"></div>
+    <div class="logo">
+        <a href="#" class="logo"><img rel="log" type="image/png" src="img/favicon-six.png" height="80" width="225"></a>
     </div>
-    <div id="dropdown-container">
-        <div class="dropdown">
-            <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="#">Main Course</a>
-                <a href="#">Side Dish</a>
-                <a href="#">Dessert</a>
-                <a href="#">Appetizer</a>
-                <a href="#">Salad</a>
-                <a href="#">Bread</a>
-                <a href="#">Breakfast</a>
-                <a href="#">Soup</a>
-                <a href="#">Beverage</a>
-                <a href="#">Sauce</a>
-                <a href="#">Drink</a>
+    <nav>
+        <div id="menu-icon">&#9776;</div>
+        <div id="dropdown-container">
+            <div class="dropdown">
+                <button class="dropbtn">RECIPES<span><i class="arrow down"></i></span></button>
+                <div class="dropdown-content">
+                    <a href="#">Main Course</a>
+                    <a href="#">Side Dish</a>
+                    <a href="#">Dessert</a>
+                    <a href="#">Appetizer</a>
+                    <a href="#">Salad</a>
+                    <a href="#">Bread</a>
+                    <a href="#">Breakfast</a>
+                    <a href="#">Soup</a>
+                    <a href="#">Beverage</a>
+                    <a href="#">Sauce</a>
+                    <a href="#">Drink</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
+                <div class="dropdown-content">
+                    <a href="recipe1.html">Garlic Chilli Oil Noodles</a>
+                    <a href="recipe2.html">ButterMilk Pumpkin Pancakes</a>
+                    <a href="recipe3.html">Basic Biscuits</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">CUISINE<span><i class="arrow down"></i></span></button>
+                <div class="dropdown-content">
+                    <a href="#">African</a>
+                    <a href="#">Chinese</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Korean</a>
+                    <a href="#">Thai</a>
+                    <a href="#">Indian</a>
+                    <a href="#">British</a>
+                    <a href="#">Irish</a>
+                    <a href="#">French</a>
+                    <a href="#">Mexican</a>
+                    <a href="#">American</a>
+                    <a href="#">Middle Eastern</a>
+                    <a href="#">Cajun</a>
+                    <a href="#">Greek</a>
+                    <a href="#">Caribbean</a>
+                    <a href="#">Latin American</a>
+                </div>
+            </div>
+            <div class="dropdown" id="login">
+                <button
+                        class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a>/<a class="dropbtn"
+                                                                                          href="signup.html">SIGN
+                    UP</a>
+                </button>
+            </div>
+            <div class="dropdown" id="logout" style="display:none;">
+                <button class="dropbtn" id="user-email">Hi User!
+                    <span><i class="arrow down"></i></span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropbtn">PROFILE</a>
+                    <a href="#" class="dropbtn">SAVED RECIPES</a>
+                    <a href="#" onclick="logout()" class="dropbtn">LOGOUT</a>
+                </div>
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">QUICK & EASY<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="recipe1.html">Garlic Chilli Oil Noodles</a>
-                <a href="recipe2.html">ButterMilk Pumpkin Pancakes</a>
-                <a href="recipe3.html">Basic Biscuits</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">CUISINE<span><i class="arrow down"></i></span></button>
-            <div class="dropdown-content">
-                <a href="#">African</a>
-                <a href="#">Chinese</a>
-                <a href="#">Japanese</a>
-                <a href="#">Korean</a>
-                <a href="#">Thai</a>
-                <a href="#">Indian</a>
-                <a href="#">British</a>
-                <a href="#">Irish</a>
-                <a href="#">French</a>
-                <a href="#">Mexican</a>
-                <a href="#">American</a>
-                <a href="#">Middle Eastern</a>
-                <a href="#">Cajun</a>
-                <a href="#">Greek</a>
-                <a href="#">Caribbean</a>
-                <a href="#">Latin American</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn"><a class="dropbtn" href="login.html">LOGIN</a></button>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn"><a class="dropbtn" href="signup.html">SIGN UP</a></button>
-        </div>
+    </nav>
+    <div class="mainMenu">
+        <ul class="mainMenu">
+            <span id="follow">follow</span>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
     </div>
-    <ul class="mainMenu">
-        <span id="follow">follow</span>
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    </ul>
 </header>
-<section>
-    <p>
-        🍅 Welcome to Twelve Tomatoes: Where Every Flavor Tells a Story 🍽️
+<main>
+    <section class="banner"></section>
+    <section id="info-section">
+        <div class="logo">
+            <img src="img/favicon-one.png" alt="Twelve Tomatoes Logo" height="200" width="200">
+        </div>
+        <p>
+            <h2>🍅 Welcome to Twelve Tomatoes: Where Every Flavor Tells a Story </h2>
+            Indulge in a culinary adventure at Twelve Tomatoes, your ultimate hub for all things delicious! Whether
+            you're a seasoned chef, a passionate foodie, or someone simply in love with the world of gastronomy, our
+            platform invites you to explore the tantalizing realms of recipes, food articles, and local restaurant
+            experiences.
+        </p>
 
-        Indulge in a culinary adventure at Twelve Tomatoes, your ultimate hub for all things delicious! Whether
-        you're a seasoned chef, a passionate foodie, or someone simply in love with the world of gastronomy, our
-        platform invites you to explore the tantalizing realms of recipes, food articles, and local restaurant
-        experiences.
-    </p>
-    <p> 🔍 Discover & Delight:
-        Search through a treasure trove of mouthwatering recipes, ranging from comforting classics to bold,
-        innovative creations. From appetizers to decadent desserts, unlock the secrets behind dishes that will
-        elevate your culinary journey.
-    </p>
-    <p>
-        📚 Nourish Your Knowledge:
-        Immerse yourself in engaging food articles, packed with cooking tips, dietary insights, and foodie
-        trends. Expand your culinary expertise and stay ahead of the curve with the latest in the world of food
-        and nutrition.
-    </p>
-    <p>
-        🌮 Community-Tested Reviews:
-        Explore local restaurant experiences through Yelp reviews curated by our community. Whether you're
-        seeking the perfect date spot, a cozy brunch place, or the trendiest hangout, our collective insights
-        will guide you to delectable dining adventures.
+        <p>
+        <h2>🔍 Discover & Delight:</h2>
+            Search through a treasure trove of mouthwatering recipes, ranging from comforting classics to bold,
+            innovative creations. From appetizers to decadent desserts, unlock the secrets behind dishes that will
+            elevate your culinary journey.
+        </p>
+        <p>
+        <h2>📚 Nourish Your Knowledge:</h2>
+            Immerse yourself in engaging food articles, packed with cooking tips, dietary insights, and foodie
+            trends. Expand your culinary expertise and stay ahead of the curve with the latest in the world of food
+            and nutrition.
+        </p>
+        <p>
+            <h2>🌮 Community-Tested Reviews:</h2>
+            Explore local restaurant experiences through Yelp reviews curated by our community. Whether you're
+            seeking the perfect date spot, a cozy brunch place, or the trendiest hangout, our collective insights
+            will guide you to delectable dining adventures.
 
-        At Twelve Tomatoes, we believe that every meal tells a story, and we're here to help you craft
-        unforgettable culinary narratives. Join us in celebrating the art of cooking, the joy of savoring
-        delightful flavors, and the exploration of local gastronomic wonders.
+            At Twelve Tomatoes, we believe that every meal tells a story, and we're here to help you craft
+            unforgettable culinary narratives. Join us in celebrating the art of cooking, the joy of savoring
+            delightful flavors, and the exploration of local gastronomic wonders.
 
-        Start your flavorful journey with Twelve Tomatoes today!
-
-        Feel free to tweak or personalize this introduction to better fit the tone and style of your website.
-    </p>
-</section>
+            Start your flavorful journey with Twelve Tomatoes today!
+        </p>
+        <p>
+        <h2>🌐 Our Mission for You:</h2>
+        At Twelve Tomatoes, our mission is to empower your culinary journey with a user-centric food destination. Explore our
+        extensive database, discovering nearby grocery stores, flexible search options for recipes from around the world, and
+        culinary insights tailored to your preferences. Access nutritional information, print and save your favorite finds, and
+        enjoy the convenience of Yelp results with customizable inputs like price and location. When logged in, rediscover
+        liked results and find new recipes tailored to your taste, making Twelve Tomatoes your go-to hub for all your food
+        adventures. Our vision is to provide a one-stop destination that meets all your food-related needs, eliminating the
+        hassle of navigating multiple websites. Join us in creating a community where every flavor tells your unique story.
+        </p>
+        <p>
+        <h2><i class="fas fa-users"></i> Meet the Team</h2>
+        </p>
+    </section>
+    <section id="team">
+<div class="team-member-wrap">
+    <div class="member-pic">
+        <img class="team-imgs" src="img/deontae.jpg" alt="picture of Deontae" height="270" width="230">
+    </div>
+    <div class="member-bio">
+        <h2>Deontae Allen</h2>
+        <h4>Software Engineer</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="member-pic">
+        <img class="team-imgs" src="img/ennupic.jpg" alt="picture of Anosh" height="270" width="230">
+    </div>
+    <div class="member-bio">
+        <h2>Anosh Kudikala</h2>
+        <h4>Software Engineer</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="member-pic">
+        <img class="team-imgs" src="img/dhathri.jpg" alt="picture of Dhathri" height="270" width="230">
+    </div>
+    <div class="member-bio">
+        <h2>Dhathri Bathini</h2>
+        <h4>Software Engineer</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <div class="member-pic">
+        <img class="team-imgs" src="img/haosen.jpg" alt="picture of Haosen" height="270" width="230">
+    </div>
+    <div class="member-bio">
+        <h2>Haosen Han</h2>
+        <h4>Software Engineer</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="member-pic">
+        <img class="team-imgs" src="img/rushikesh.png" alt="picture of Rushikesh" height="270" width="230">
+    </div>
+    <div class="member-bio">
+        <h2>Rushikesh Shirsat</h2>
+        <h4>Software Engineer</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+        </p>
+    </div>
+</div>
+    </section>
+</main>
 <footer>
     <section class="footer-container">
         <div id="footer-top"></div>
