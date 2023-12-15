@@ -241,7 +241,6 @@ header ul li a {
     padding: 24px 20px;
     font-size: 20px;
     color: white;
-
 }
 
 #search-bar button i {
@@ -311,7 +310,6 @@ tn {
 
 /* Team member section and Yelp logo*/
 .team-members {
-    background-color: white;
     display: grid;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -475,13 +473,9 @@ tn {
 .footer {
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
     background-color: white;
     color: black;
     font-size: 14px;
-}
-
-.footer {
     padding: 30px 0px;
     font-family: 'Play', sans-serif;
     text-align: center;
@@ -559,7 +553,6 @@ tn {
 .recipe-details-btn {
     margin-left: 120px;
 }
-
 
 @media (max-width: 1300px) {
     .recipe-container {

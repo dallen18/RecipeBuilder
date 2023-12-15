@@ -154,7 +154,6 @@ header .logo {
     background-color: #B5b0b0;
 }
 
-
 header ul {
     position: relative;
     display: flex;
@@ -200,8 +199,6 @@ header ul li a {
     background-image: url('../img/grey-background1.jpeg');
 }
 
-
-/*Test new search bar*/
 .search-bar-container {
     width: 100%;
     display: flex;
@@ -234,7 +231,6 @@ header ul li a {
     padding: 24px 20px;
     font-size: 20px;
     color: white;
-
 }
 
 #search-bar button i {
@@ -301,15 +297,8 @@ tn {
     font-size: 14px;
 }
 
-.footer-container {
-    margin: auto;
-    display: flex;
-    background-color: white;
-}
-
 .footer-content p {
     text-align: center;
-
 }
 
 #footer-bottom {
@@ -318,7 +307,6 @@ tn {
     min-height: 25vh;
 }
 
-/*test footer*/
 .footer-container {
     display: grid;
     grid-template-rows: auto 1fr; /* Two rows, first auto height, second takes the remaining space */
@@ -374,13 +362,6 @@ tn {
     margin-top: 20px;
 }
 
-/*end test*/
-
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
-
 .footer .row {
     width: 100%;
     margin: 1% 0;
@@ -414,6 +395,13 @@ body {
     margin: 0 1%;
 }
 
+/*end footer*/
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 @media (max-width: 720px) {
     .footer {
         text-align: left;
@@ -430,113 +418,6 @@ body {
         margin: 0 3%;
     }
 }
-
-/*styling for search results, changes grid layout depending on size of the screen*/
-.recipe-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 5px;
-    row-gap: 15px;
-    margin: 2px;
-    margin-top: 4px;
-}
-
-.recipe-image {
-    max-width: 312px;
-    max-height: 231px;
-}
-
-.recipe-item {
-    max-width: 312px;
-    padding-bottom: 5px;
-}
-
-.recipe-details-btn {
-    margin-left: 120px;
-}
-
-
-@media (max-width: 1300px) {
-    .recipe-container {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .recipe-item {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 1000px) {
-    .recipe-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    p {
-        margin-bottom: 10px;
-    }
-
-    .recipe-item {
-        max-width: 312px;
-        max-height: 388px;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 630px) {
-    .recipe-container {
-        grid-template-columns: 1fr;
-        margin-bottom: 10px;
-    }
-
-    .recipe-item {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-}
-
-/* Styling of the modal*/
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    align-items: center;
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-#modalTitle {
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 
 /*Hamburger styling before and after screen less than 1090px*/
 .logo {
@@ -576,6 +457,7 @@ body {
         margin-right: 50px;
         margin-left: 20px;
         color: #fc1c1c;
+        z-index: 12;
     }
 
     .mainMenu {
@@ -589,7 +471,7 @@ body {
         left: 10px;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1;
+        z-index: 12;
         max-width: 25vh;
         text-align: center;
         margin-top: 10px;
@@ -607,7 +489,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent background */
     z-index: 2;
-/
 }
 
 /* Add this rule to disable scrolling when the overlay is displayed */
