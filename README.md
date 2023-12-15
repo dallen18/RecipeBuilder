@@ -19,7 +19,7 @@ JavaScript
 
   *YelpKey: Your Yelp API key.
   *IpUrl, IpKey, IpHost: Details for IP Geo Location API.
-  *RecipeKey: Your API key for the Recipe - Food - Nutrition API.
+  *RecipeKey: Your API key for the Recipe - Spoonacular API
   
 6.Download Packages: Install the necessary packages for the project using your preferred package manager.
 
