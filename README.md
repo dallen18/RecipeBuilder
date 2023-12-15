@@ -9,7 +9,7 @@ JavaScript
 # How to run project
 1.Download Code: Begin by downloading the project code from the new-main repository.
 
-2.Create RapidAPI Account: Sign up for a RapidAPI account and subscribe to the IP Geo Location and Recipe - Food - Nutrition APIs.
+2.Create RapidAPI Account: Sign up for a RapidAPI account and subscribe to the IP Geo Location and Spoonacular.
 
 3.Yelp API Key: Obtain an API key from Yelp by visiting https://www.yelp.com/developers.
 
