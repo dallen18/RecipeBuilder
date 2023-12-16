@@ -134,10 +134,10 @@ async function ipFunct() {
 /*Second handler to return location for bars at a specific location, still needs work*/
 async function handleApplicationRequest2(res) {
     try {
-        //const {city} = await ipFunct2(); hardcoded Chicago until further notice
+        const city = await ipFunct2();
         const searchRequest2 = {
             term: 'bars',
-            location: 'Chicago',
+            location: city,
             price: '1',
         };
         client.search(searchRequest2).then(response => {
@@ -151,9 +151,7 @@ async function handleApplicationRequest2(res) {
     }
 }
 
-//Keeping in case needed for future use
-
-/*async function ipFunct2() {
+async function ipFunct2() {
     const url = 'https://ip-geo-location.p.rapidapi.com/ip/check?format=json';
     const options = {
         method: 'GET',
@@ -166,13 +164,13 @@ async function handleApplicationRequest2(res) {
         const response = await fetch(url, options);
         const result = await response.json();
         const ip = result;
-        const city = ip.city.name;
+        const city = await ip.city.name;
         return city;
     } catch (error) {
         console.error(error);
         throw error;
     }
-}*/
+}
 
 jsonApp.get("/api/searchRecipe", function (req, res) {
     const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?maxReadyTime=20&number=10`;
@@ -196,7 +194,6 @@ jsonApp.get("/api/searchRecipe", function (req, res) {
 });
 
 jsonApp.use(express.json());
-
 jsonApp.post('/openai', async (req, res) => {
     const {message} = req.body;
     const url = 'https://open-ai21.p.rapidapi.com/conversationmpt';
