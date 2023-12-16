@@ -1,6 +1,7 @@
 "use strict";
 
 require('dotenv').config();
+
 // Import required modules and variables
 const express = require("express");
 const http = require("http");
@@ -12,6 +13,7 @@ const ipKey = process.env.IpKey;
 const ipHost = process.env.IpHost;
 const ipUrl = process.env.IpUrl;
 const recipeKey = process.env.RecipeKey;
+const openAI = process.env.OpenAI;
 let page = 1; // Track the current page
 const resultsPerPage = 36; // Number of results per page
 
@@ -39,10 +41,8 @@ jsonApp.get("/api/searchRecipe", function (req, res) {
             'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
         }
     };
-
     // Increment the page for the next fetch, more results button is not yet set for more random results
     page++;
-
     fetch(url, options)
         .then(response => response.json())
         .then(result => {
@@ -194,6 +194,41 @@ jsonApp.get("/api/searchRecipe", function (req, res) {
             res.status(500).json({error: "Internal Server Error"});
         });
 });
+
+jsonApp.use(express.json());
+
+jsonApp.post('/openai', async (req, res) => {
+    const {message} = req.body;
+    const url = 'https://open-ai21.p.rapidapi.com/conversationmpt';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-RapidAPI-Key': openAI,
+            'X-RapidAPI-Host': 'open-ai21.p.rapidapi.com',
+        },
+        body: JSON.stringify({
+            messages: [
+                {
+                    role: 'user',
+                    content: message,
+                },
+            ],
+            web_access: false,
+        }),
+    };
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: 'Internal Server Error'});
+    }
+});
+
+
+
 
 
 

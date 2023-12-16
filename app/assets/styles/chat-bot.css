@@ -1,0 +1,104 @@
+.conversation-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    font-family: "serif";
+}
+
+.message {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #B5b0b0;
+    font-family: "serif";
+}
+
+.user-message {
+    text-align: right;
+    background-color: rgb(252, 28, 28, .3);
+    font-family: "serif";
+}
+
+.gpt-message {
+    text-align: left;
+    background-color: #f0f0f0;
+    font-family: "serif";
+}
+
+#userInput {
+    width: 230px;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px 0 0 10px;
+    font-family: "serif";
+}
+
+#sendMessage {
+    border-radius: 0 10px 10px 0;
+    padding: 0px;
+    height: 30px;
+    width: 50px;
+    font-family: "serif";
+}
+
+#chat-bot {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 11vh;
+    position: fixed;
+    right: 30px;
+    font-family: "serif";
+    display: block;
+}
+
+#chat {
+    position: fixed;
+    right: 80px;
+    margin-top: 11vh;
+    color: #fc1c1c;
+    display: block;
+    cursor: pointer;
+    /*-webkit-text-stroke-width: .01px;
+    -webkit-text-stroke-color: black;*/
+}
+
+h3 {
+    color: #fc1c1c;
+    text-align: center;
+    font-family: "serif";
+}
+
+.chat-input {
+    display: flex;
+}
+
+#chat-header {
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#closeButton {
+    padding: 9px 0 0 9px;
+    color: #fc1c1c;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1090px) {
+
+    #chat-bot {
+        display: none;
+    }
+
+    #chat {
+        display: none;
+    }
+}
+

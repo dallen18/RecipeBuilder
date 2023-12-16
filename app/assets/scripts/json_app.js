@@ -152,7 +152,6 @@ function loadApp() {
                 imageContainer.append(businessDiv);
             }
         });
-
         //Appends container to html id results
         $("#results").append(imageContainer);
     }

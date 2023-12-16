@@ -354,8 +354,8 @@ tn {
 }
 
 .team-imgs {
-    max-width: 160px;
-    max-height: 160px;
+    width: 160px;
+    height: 160px;
     flex-wrap: wrap;
     border-radius: 50%;
     border: 2px solid #fc1c1c;
@@ -656,7 +656,7 @@ tn {
 }
 
 /* Media query for screens less than 1090px */
-@media (max-width: 1090px) {
+@media screen and (max-width: 1090px) {
     header {
         align-items: center;
     }

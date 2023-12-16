@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/chat-bot.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet">
@@ -141,6 +142,25 @@
             <button id="search-btn"><img src="img/search-icon.png" id="search-icon"></button>
         </form>
     </div>
+    <div id="chat">
+        <h1>Chat?</h1>
+    </div>
+    <section id="chat-bot">
+        <div id="chat-header">
+            <div id="closeButton" class="close-button">
+                <i class="fas fa-times"></i>
+            </div>
+            <div>
+                <h3>Food Questions?</h3>
+            </div>
+        </div>
+        <div id="conversation" class="conversation-container">
+        </div>
+        <form id="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button id="sendMessage">Send</button>
+        </form>
+    </section>
 </section>
 
 <section class="search-results">
@@ -295,6 +315,8 @@
     <script src="./assets/scripts/json_app.js"></script>
     <!-- Hamburger Menu Script -->
     <script src="./assets/scripts/hamburger-menu.js"></script>
+    <!-- Chatbot Script -->
+    <script src="./assets/scripts/chat-bot.js"></script>
 </footer>
 </body>
 </html>
